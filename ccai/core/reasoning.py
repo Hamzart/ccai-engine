@@ -28,6 +28,10 @@ class ReasoningCore:
             signal = hub.pop()
             if not signal or signal.confidence < threshold:
                 continue
+            if "confirmed" in signal.payload or "final_answer" in signal.payload:
+                answers.append(signal)
+                continue
+
             node = self.graph.get_node(signal.origin)
             if not node:
                 continue
@@ -36,9 +40,9 @@ class ReasoningCore:
                 delta, new_sigs = subsystem.evaluate(signal, node)
                 signal.confidence += delta
                 for ns in new_sigs:
-                    hub.push(ns)
-                for ns in new_sigs:
                     if "final_answer" in ns.payload or ns.payload.get("confirmed"):
                         answers.append(ns)
+                    else:
+                        hub.push(ns)
 
         return answers
