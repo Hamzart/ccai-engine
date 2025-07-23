@@ -28,6 +28,7 @@ class InformationExtractor:
             self._extract_used_for(sent)
             self._extract_can_do(sent)
             self._extract_adjective_property(sent)
+            self._extract_alias(sent)
         print("✅ Text ingestion complete.")
 
     def _get_or_create_node(self, name: str, ctype: str = "entity") -> ConceptNode:
@@ -51,7 +52,7 @@ class InformationExtractor:
             if token.dep_ == "ROOT" and token.lemma_ == "be":
                 subject = next((c for c in token.children if c.dep_ in ("nsubj", "nsubjpass")), None)
                 attribute = next((c for c in token.children if c.dep_ == "attr"), None)
-                if subject and attribute and attribute.pos_ in ("NOUN", "PROPN"):
+                if subject and attribute and attribute.pos_ in ("NOUN", "PROPN", "ADJ"):
                     print(f"  -> Found IS-A: '{subject.text}' is a '{attribute.text}'")
                     subj_node = self._get_or_create_node(subject.text)
                     attr_node = self._get_or_create_node(attribute.text)
@@ -130,3 +131,22 @@ class InformationExtractor:
                         new_specs.append(PropertySpec(value=value, score=score))
                         
                     node.properties[prop_category] = new_specs
+
+    def _extract_alias(self, sent: Doc):
+        """Extract alias statements like 'X is called Y' or 'X is known as Y'."""
+        for token in sent:
+            if token.dep_ == "ROOT" and token.lemma_ in {"call", "know"}:
+                subject = next((c for c in token.children if c.dep_ in ("nsubj", "nsubjpass")), None)
+                obj = None
+                if token.lemma_ == "call":
+                    obj = next((c for c in token.children if c.dep_ in ("dobj", "attr", "oprd")), None)
+                else:  # "known as"
+                    prep = next((c for c in token.children if c.dep_ == "prep" and c.text.lower() == "as"), None)
+                    if prep:
+                        obj = next(prep.children, None)
+                if subject and obj:
+                    print(f"  -> Found ALIAS: '{subject.text}' is called '{obj.text}'")
+                    node = self._get_or_create_node(subject.text)
+                    alias = obj.text.lower().strip()
+                    if alias not in node.aliases:
+                        node.aliases.append(alias)

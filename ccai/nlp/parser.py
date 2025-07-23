@@ -18,7 +18,9 @@ class QueryParser:
         """
         Analyzes the dependency parse of a question to determine user intent.
         """
-        doc = self.nlp(text.lower().strip().rstrip('?'))
+        cleaned = text.lower().strip()
+        cleaned = cleaned.replace("what's", "what is").replace("whats", "what is")
+        doc = self.nlp(cleaned.rstrip('?'))
         
         try:
             sent = next(doc.sents)
@@ -26,6 +28,12 @@ class QueryParser:
             return None
 
         # --- Enhanced Intent Detection ---
+
+        # 0. Definition-style questions
+        if sent.root.lemma_ in {"define", "describe", "explain"}:
+            obj = self._find_object(sent, sent.root, deps=("dobj", "attr", "pobj"))
+            if obj:
+                return Signal(origin=obj.text, purpose="QUERY", payload={"ask": "relation.is_a"})
 
         # 1. Check for Verification Intent (is, does, can)
         # This rule is now more specific: it only triggers if the sentence STARTS with an auxiliary verb.
