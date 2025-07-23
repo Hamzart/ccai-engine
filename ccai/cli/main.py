@@ -5,16 +5,18 @@ import typer
 from rich import print, print_json
 
 from ccai.core.graph import ConceptGraph
-from ccai.core.models import ConceptNode
 from ccai.nlp.extractor import InformationExtractor
+from ccai.nlp.primitives import PrimitiveManager
 
 # This CLI is now purely for development and data management.
 app = typer.Typer(help="A CLI tool to manage the CC-AI's knowledge graph.")
 
 # Initialize components needed for the CLI
 STORAGE_DIR = Path("graph_data")
+PRIMITIVES_FILE = Path("primitives.json")
 graph = ConceptGraph(STORAGE_DIR)
-extractor = InformationExtractor(graph)
+primitive_manager = PrimitiveManager(PRIMITIVES_FILE)
+extractor = InformationExtractor(graph, primitive_manager)
 
 @app.callback(invoke_without_command=True)
 def main(ctx: typer.Context):

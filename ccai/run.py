@@ -13,6 +13,9 @@ from ccai.nlp.primitives import PrimitiveManager
 from ccai.core.reasoning import ReasoningCore
 from ccai.core.subsystems.inheritance import InheritanceResolver
 from ccai.core.subsystems.relation import RelationResolver
+from ccai.core.subsystems.fuzzy import FuzzyMatch
+from ccai.core.subsystems.bayes import BayesianUpdater
+from ccai.core.subsystems.conflict import ConflictResolver
 
 def run_chat_session():
     """Initializes all AI components and starts the interactive chat loop."""
@@ -29,7 +32,10 @@ def run_chat_session():
     
     subsystems = [
         InheritanceResolver(),
-        RelationResolver(graph=graph)
+        RelationResolver(graph=graph),
+        FuzzyMatch(),
+        BayesianUpdater(),
+        ConflictResolver(),
     ]
     reasoning_core = ReasoningCore(graph, subsystems)
     

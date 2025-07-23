@@ -5,6 +5,8 @@ import os
 import time
 from pathlib import Path
 from typing import Dict, List, Any, Tuple
+from threading import Thread, Event
+from queue import Queue, Empty
 
 import msgpack
 from ccai.core.models import ConceptNode
@@ -16,9 +18,15 @@ class GraphPersistence:
         self.storage_path = storage_path
         self.snapshot_file = storage_path / "snapshot.msgpack"
         self.wal_file = storage_path / "wal.ndjson"
-        
+
         # Ensure the storage directory exists
         self.storage_path.mkdir(parents=True, exist_ok=True)
+
+        # Queue and background thread for async WAL writing
+        self._queue: Queue = Queue()
+        self._stop_event = Event()
+        self._worker = Thread(target=self._process_queue, daemon=True)
+        self._worker.start()
 
     def save_snapshot(self, nodes: Dict[str, ConceptNode]):
         """Saves the entire graph to a compressed msgpack file atomically."""
@@ -59,8 +67,30 @@ class GraphPersistence:
             "op": op,
             **data
         }
-        with open(self.wal_file, "a") as f:
-            f.write(json.dumps(log_entry) + "\n")
+        self._queue.put(log_entry)
+
+    def _process_queue(self):
+        """Background worker that writes queued mutations to disk."""
+        while not self._stop_event.is_set():
+            try:
+                entry = self._queue.get(timeout=0.1)
+            except Empty:
+                continue
+            with open(self.wal_file, "a") as f:
+                f.write(json.dumps(entry) + "\n")
+            self._queue.task_done()
+
+    def stop(self):
+        """Stops the background writer and flushes remaining entries."""
+        self._stop_event.set()
+        self._worker.join()
+        while True:
+            try:
+                entry = self._queue.get_nowait()
+            except Empty:
+                break
+            with open(self.wal_file, "a") as f:
+                f.write(json.dumps(entry) + "\n")
 
     def load_mutations_after(self, timestamp: float) -> List[Dict[str, Any]]:
         """Loads all mutations from the WAL that occurred after the given timestamp."""
