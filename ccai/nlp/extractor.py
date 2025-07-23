@@ -13,7 +13,14 @@ class InformationExtractor:
     properties, and relationships, populating the concept graph.
     """
     def __init__(self, graph: ConceptGraph, primitive_manager: PrimitiveManager):
-        self.nlp = spacy.load("en_core_web_sm")
+        try:
+            self.nlp = spacy.load("en_core_web_sm")
+        except OSError:
+            # Use a minimal English pipeline when the model isn't installed
+            self.nlp = spacy.blank("en")
+            self.nlp.add_pipe("sentencizer")
+            self.nlp.add_pipe("lemmatizer", config={"mode": "rule"})
+            self.nlp.initialize()
         self.graph = graph
         self.primitives = primitive_manager
 
