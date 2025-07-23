@@ -42,9 +42,17 @@ set of heuristic extraction rules.
 
 ## Running the demo
 
-The quickest way to experiment is to execute `python -m ccai.run` and interact
-with the chatbot.  Use commands such as `@learn <sentence>` or `@ingest <file>`
-to teach the system new facts.  All data is stored in `graph_data/`.
+Install the package in editable mode and download the small spaCy model first:
+
+```bash
+pip install -e .
+python -m spacy download en_core_web_sm
+```
+
+Then run the interactive demo via `python -m ccai.run` and chat with the bot.
+On the first launch the engine will automatically ingest `knowledge.txt` to
+seed the concept graph. Use commands such as `@learn <sentence>` or
+`@ingest <file>` to teach new facts.  All data is stored in `graph_data/`.
 
 Developers can also run `python -m ccai.cli --help` for maintenance commands.
 

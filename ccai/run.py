@@ -42,6 +42,14 @@ def run_chat_session():
     # --- 2. Load Knowledge ---
     print("🧠 Loading Concept Graph from disk...")
     graph.load_from_disk()
+
+    # Seed the graph with built-in knowledge on first run
+    if not graph._nodes:
+        kb_file = Path("knowledge.txt")
+        if kb_file.exists():
+            print("📥 Seeding knowledge base from knowledge.txt ...")
+            extractor.ingest_text(kb_file.read_text())
+            graph.save_snapshot()
     
     # --- 3. Start Chat Loop ---
     print("✅ AI Ready. Let's chat! (Hint: try '@forget_all' to reset memory)")
