@@ -12,7 +12,15 @@ class QueryParser:
     Signal objects for the reasoning core.
     """
     def __init__(self):
-        self.nlp = spacy.load("en_core_web_sm")
+        try:
+            self.nlp = spacy.load("en_core_web_sm")
+        except OSError:
+            # Fallback for environments without the small English model.
+            self.nlp = spacy.blank("en")
+            self.nlp.add_pipe("sentencizer")
+            # Add a light lemmatizer so simple rules still work
+            self.nlp.add_pipe("lemmatizer", config={"mode": "rule"})
+            self.nlp.initialize()
 
     def parse_question(self, text: str) -> Optional[Signal]:
         """
@@ -20,6 +28,14 @@ class QueryParser:
         """
         cleaned = text.lower().strip()
         cleaned = cleaned.replace("what's", "what is").replace("whats", "what is")
+
+        # Basic rule for definition-style questions to work without a parser
+        for kw in ("define", "describe", "explain"):
+            if cleaned.startswith(kw + " "):
+                obj = cleaned[len(kw):].strip()
+                if obj:
+                    return Signal(origin=obj, purpose="QUERY", payload={"ask": "relation.is_a"})
+
         doc = self.nlp(cleaned.rstrip('?'))
         
         try:
