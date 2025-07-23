@@ -50,6 +50,10 @@ python -m spacy download en_core_web_sm
 ```
 
 Then run the interactive demo via `python -m ccai.run` and chat with the bot.
+On the first launch the engine will automatically ingest `knowledge.txt` to
+seed the concept graph. Use commands such as `@learn <sentence>` or
+`@ingest <file>` to teach new facts.  All data is stored in `graph_data/`.
+=======
 Use commands such as `@learn <sentence>` or `@ingest <file>` to teach new
 facts.  All data is stored in `graph_data/`.
 
