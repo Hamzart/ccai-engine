@@ -14,6 +14,7 @@ app = typer.Typer(help="A CLI tool to manage the CC-AI's knowledge graph.")
 # Initialize components needed for the CLI
 STORAGE_DIR = Path("graph_data")
 PRIMITIVES_FILE = Path("primitives.json")
+
 graph = ConceptGraph(STORAGE_DIR)
 primitive_manager = PrimitiveManager(PRIMITIVES_FILE)
 extractor = InformationExtractor(graph, primitive_manager)
