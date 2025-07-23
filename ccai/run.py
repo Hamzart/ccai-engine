@@ -63,6 +63,11 @@ def run_chat_session():
 
             text_stripped = text.strip()
 
+            # --- Simple Greeting Handling ---
+            if text_stripped.lower() in ["hello", "hi", "hey"]:
+                print(Panel("Hello! How can I assist you today?", title="Greeting", border_style="green"))
+                continue
+
             # --- Command Handling ---
             if text_stripped.startswith("@"):
                 if text_stripped == "@forget_all":

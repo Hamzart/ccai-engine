@@ -19,6 +19,8 @@ class ConceptNode(BaseModel):
         "entity", "object", "agent", "state", "event", "quality", "relation", "function"
     ]
     inherits_from: List[str] = Field(default_factory=list)
+    # Optional list of alternative names for this concept
+    aliases: List[str] = Field(default_factory=list)
     
     # This now stores the list of property values with their calculated scores.
     properties: Dict[str, List[PropertySpec]] = Field(default_factory=dict)

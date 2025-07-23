@@ -196,6 +196,7 @@ A cat can hunt mice.
 
 A human is a mammal.
 A human is an agent.
+A human is also called a person.
 A human can walk.
 A human can talk.
 A human can think.
@@ -230,7 +231,6 @@ An apple is crisp.
 An apple grows on tree.
 
 An orange is a fruit.
-A fruit is food.
 A fruit can be eaten.
 An orange is orange.
 An orange is juicy.
@@ -268,6 +268,10 @@ A phone has battery.
 A phone can call.
 A phone can message.
 A phone can browse.
+A smartphone is called a phone.
+A smartphone is an object.
+A smartphone has screen.
+A smartphone can call.
 
 A computer is an object.
 A computer has CPU.
