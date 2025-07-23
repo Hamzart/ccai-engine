@@ -144,6 +144,11 @@ class InformationExtractor:
                     prep = next((c for c in token.children if c.dep_ == "prep" and c.text.lower() == "as"), None)
                     if prep:
                         obj = next(prep.children, None)
+        """Extracts simple alias statements like 'X is called Y'."""
+        for token in sent:
+            if token.lemma_ == "call" and token.dep_ == "ROOT":
+                subject = next((c for c in token.children if c.dep_ in ("nsubj", "nsubjpass")), None)
+                obj = next((c for c in token.children if c.dep_ in ("dobj", "attr", "oprd")), None)
                 if subject and obj:
                     print(f"  -> Found ALIAS: '{subject.text}' is called '{obj.text}'")
                     node = self._get_or_create_node(subject.text)
