@@ -1,0 +1,36 @@
+{
+  "slots": {
+    "visual": {
+      "color": ["red", "green", "blue", "yellow", "black", "white"],
+      "brightness": ["bright", "dim", "dark"],
+      "shape": ["round", "flat", "pointed", "square", "curved"],
+      "size": ["big", "small", "narrow", "wide"]
+    },
+    "tactile": {
+      "texture": ["smooth", "rough", "bumpy", "sticky"],
+      "hardness": ["hard", "soft"],
+      "weight": ["heavy", "light"]
+    },
+    "thermal": {
+      "temperature": ["hot", "cold", "warm", "cool"]
+    },
+    "temporal": {
+      "speed": ["fast", "slow", "still"]
+    }
+  },
+  "tags": {
+    "visual": {
+      "motion": ["floating", "moving"]
+    },
+    "tactile": {
+      "quality": ["sharp", "dull", "sticky"]
+    },
+    "internal": {
+      "state": ["alive", "broken", "off", "on", "active", "passive", "intentional"],
+      "emotion": ["happy", "sad", "afraid", "calm"]
+    },
+    "chemical": {
+      "taste": ["sweet", "sour", "bitter", "salty", "bland"]
+    }
+  }
+}

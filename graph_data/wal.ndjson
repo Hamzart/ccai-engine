@@ -1,0 +1,368 @@
+{"ts": 1753296237.900239, "op": "ADD_NODE", "node_data": {"name": "object", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.900212, "usage": 0}}}
+{"ts": 1753296237.900508, "op": "ADD_NODE", "node_data": {"name": "entity", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.900504, "usage": 0}}}
+{"ts": 1753296237.900743, "op": "ADD_EDGE", "src": "object", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.900819, "op": "ADD_NODE", "node_data": {"name": "exist", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.900815, "usage": 0}}}
+{"ts": 1753296237.9008589, "op": "ADD_EDGE", "src": "entity", "rel": "can_do", "dst": "exist"}
+{"ts": 1753296237.900943, "op": "ADD_NODE", "node_data": {"name": "change", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.900939, "usage": 0}}}
+{"ts": 1753296237.900979, "op": "ADD_EDGE", "src": "entity", "rel": "can_do", "dst": "change"}
+{"ts": 1753296237.901046, "op": "ADD_NODE", "node_data": {"name": "physical_entity", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901043, "usage": 0}}}
+{"ts": 1753296237.901084, "op": "ADD_EDGE", "src": "physical_entity", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.901147, "op": "ADD_NODE", "node_data": {"name": "volume", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901143, "usage": 0}}}
+{"ts": 1753296237.9011798, "op": "ADD_EDGE", "src": "physical_entity", "rel": "has_part", "dst": "volume"}
+{"ts": 1753296237.901262, "op": "ADD_NODE", "node_data": {"name": "abstract_entity", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901259, "usage": 0}}}
+{"ts": 1753296237.9012952, "op": "ADD_EDGE", "src": "abstract_entity", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.901365, "op": "ADD_NODE", "node_data": {"name": "concept", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901361, "usage": 0}}}
+{"ts": 1753296237.9013991, "op": "ADD_EDGE", "src": "abstract_entity", "rel": "has_part", "dst": "concept"}
+{"ts": 1753296237.901448, "op": "ADD_NODE", "node_data": {"name": "meaning", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9014452, "usage": 0}}}
+{"ts": 1753296237.90148, "op": "ADD_EDGE", "src": "abstract_entity", "rel": "has_part", "dst": "meaning"}
+{"ts": 1753296237.901539, "op": "ADD_NODE", "node_data": {"name": "agent", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901536, "usage": 0}}}
+{"ts": 1753296237.901571, "op": "ADD_EDGE", "src": "agent", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.9016562, "op": "ADD_NODE", "node_data": {"name": "act", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901653, "usage": 0}}}
+{"ts": 1753296237.901727, "op": "ADD_EDGE", "src": "agent", "rel": "can_do", "dst": "act"}
+{"ts": 1753296237.90178, "op": "ADD_NODE", "node_data": {"name": "decide", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9017768, "usage": 0}}}
+{"ts": 1753296237.90182, "op": "ADD_EDGE", "src": "agent", "rel": "can_do", "dst": "decide"}
+{"ts": 1753296237.901868, "op": "ADD_NODE", "node_data": {"name": "learn", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901865, "usage": 0}}}
+{"ts": 1753296237.9019039, "op": "ADD_EDGE", "src": "agent", "rel": "can_do", "dst": "learn"}
+{"ts": 1753296237.901967, "op": "ADD_NODE", "node_data": {"name": "place", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.901964, "usage": 0}}}
+{"ts": 1753296237.902005, "op": "ADD_EDGE", "src": "place", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.902071, "op": "ADD_NODE", "node_data": {"name": "location", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.902068, "usage": 0}}}
+{"ts": 1753296237.902111, "op": "ADD_EDGE", "src": "place", "rel": "has_part", "dst": "location"}
+{"ts": 1753296237.902161, "op": "ADD_NODE", "node_data": {"name": "contain", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9021592, "usage": 0}}}
+{"ts": 1753296237.902197, "op": "ADD_EDGE", "src": "place", "rel": "can_do", "dst": "contain"}
+{"ts": 1753296237.902266, "op": "ADD_NODE", "node_data": {"name": "tool", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.902263, "usage": 0}}}
+{"ts": 1753296237.902306, "op": "ADD_EDGE", "src": "tool", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.9023738, "op": "ADD_NODE", "node_data": {"name": "break", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9023712, "usage": 0}}}
+{"ts": 1753296237.90241, "op": "ADD_EDGE", "src": "tool", "rel": "can_do", "dst": "break"}
+{"ts": 1753296237.9024599, "op": "ADD_NODE", "node_data": {"name": "wear", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.902457, "usage": 0}}}
+{"ts": 1753296237.9024909, "op": "ADD_EDGE", "src": "tool", "rel": "can_do", "dst": "wear"}
+{"ts": 1753296237.902529, "op": "ADD_NODE", "node_data": {"name": "weapon", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.902526, "usage": 0}}}
+{"ts": 1753296237.902559, "op": "ADD_EDGE", "src": "weapon", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.902603, "op": "ADD_NODE", "node_data": {"name": "harm", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9026, "usage": 0}}}
+{"ts": 1753296237.9026518, "op": "ADD_EDGE", "src": "weapon", "rel": "can_do", "dst": "harm"}
+{"ts": 1753296237.90271, "op": "ADD_NODE", "node_data": {"name": "knife", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9027069, "usage": 0}}}
+{"ts": 1753296237.90274, "op": "ADD_EDGE", "src": "knife", "rel": "is_a", "dst": "weapon"}
+{"ts": 1753296237.902781, "op": "ADD_EDGE", "src": "knife", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.902853, "op": "ADD_NODE", "node_data": {"name": "cut", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9028502, "usage": 0}}}
+{"ts": 1753296237.902882, "op": "ADD_EDGE", "src": "knife", "rel": "can_do", "dst": "cut"}
+{"ts": 1753296237.90293, "op": "ADD_NODE", "node_data": {"name": "sword", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9029272, "usage": 0}}}
+{"ts": 1753296237.902962, "op": "ADD_EDGE", "src": "sword", "rel": "is_a", "dst": "weapon"}
+{"ts": 1753296237.903029, "op": "ADD_EDGE", "src": "sword", "rel": "can_do", "dst": "cut"}
+{"ts": 1753296237.903074, "op": "ADD_NODE", "node_data": {"name": "thrust", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903072, "usage": 0}}}
+{"ts": 1753296237.903106, "op": "ADD_EDGE", "src": "sword", "rel": "can_do", "dst": "thrust"}
+{"ts": 1753296237.9031491, "op": "ADD_NODE", "node_data": {"name": "hammer", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903146, "usage": 0}}}
+{"ts": 1753296237.903181, "op": "ADD_EDGE", "src": "hammer", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.9032261, "op": "ADD_NODE", "node_data": {"name": "head", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903223, "usage": 0}}}
+{"ts": 1753296237.903255, "op": "ADD_EDGE", "src": "hammer", "rel": "has_part", "dst": "head"}
+{"ts": 1753296237.903307, "op": "ADD_NODE", "node_data": {"name": "hit", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9033039, "usage": 0}}}
+{"ts": 1753296237.903336, "op": "ADD_EDGE", "src": "hammer", "rel": "can_do", "dst": "hit"}
+{"ts": 1753296237.9033852, "op": "ADD_EDGE", "src": "hammer", "rel": "can_do", "dst": "break"}
+{"ts": 1753296237.9034271, "op": "ADD_NODE", "node_data": {"name": "screwdriver", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903424, "usage": 0}}}
+{"ts": 1753296237.903459, "op": "ADD_EDGE", "src": "screwdriver", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.9035048, "op": "ADD_NODE", "node_data": {"name": "shaft", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903502, "usage": 0}}}
+{"ts": 1753296237.9035342, "op": "ADD_EDGE", "src": "screwdriver", "rel": "has_part", "dst": "shaft"}
+{"ts": 1753296237.903597, "op": "ADD_NODE", "node_data": {"name": "turn", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903595, "usage": 0}}}
+{"ts": 1753296237.903628, "op": "ADD_EDGE", "src": "screwdriver", "rel": "can_do", "dst": "turn"}
+{"ts": 1753296237.903681, "op": "ADD_NODE", "node_data": {"name": "wrench", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903678, "usage": 0}}}
+{"ts": 1753296237.903712, "op": "ADD_EDGE", "src": "wrench", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.903757, "op": "ADD_NODE", "node_data": {"name": "twist", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903755, "usage": 0}}}
+{"ts": 1753296237.903787, "op": "ADD_EDGE", "src": "wrench", "rel": "can_do", "dst": "twist"}
+{"ts": 1753296237.9038389, "op": "ADD_NODE", "node_data": {"name": "car", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903837, "usage": 0}}}
+{"ts": 1753296237.9038742, "op": "ADD_NODE", "node_data": {"name": "vehicle", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.903871, "usage": 0}}}
+{"ts": 1753296237.903907, "op": "ADD_EDGE", "src": "car", "rel": "is_a", "dst": "vehicle"}
+{"ts": 1753296237.90395, "op": "ADD_EDGE", "src": "vehicle", "rel": "is_a", "dst": "tool"}
+{"ts": 1753296237.903989, "op": "ADD_EDGE", "src": "vehicle", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.904041, "op": "ADD_NODE", "node_data": {"name": "move", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904039, "usage": 0}}}
+{"ts": 1753296237.904072, "op": "ADD_EDGE", "src": "vehicle", "rel": "can_do", "dst": "move"}
+{"ts": 1753296237.904118, "op": "ADD_NODE", "node_data": {"name": "engine", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904115, "usage": 0}}}
+{"ts": 1753296237.9041479, "op": "ADD_EDGE", "src": "vehicle", "rel": "has_part", "dst": "engine"}
+{"ts": 1753296237.904191, "op": "ADD_NODE", "node_data": {"name": "wheels", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9041889, "usage": 0}}}
+{"ts": 1753296237.904222, "op": "ADD_EDGE", "src": "vehicle", "rel": "has_part", "dst": "wheels"}
+{"ts": 1753296237.904263, "op": "ADD_EDGE", "src": "car", "rel": "has_part", "dst": "wheels"}
+{"ts": 1753296237.904307, "op": "ADD_NODE", "node_data": {"name": "doors", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904304, "usage": 0}}}
+{"ts": 1753296237.904338, "op": "ADD_EDGE", "src": "car", "rel": "has_part", "dst": "doors"}
+{"ts": 1753296237.904381, "op": "ADD_NODE", "node_data": {"name": "seats", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904379, "usage": 0}}}
+{"ts": 1753296237.904428, "op": "ADD_EDGE", "src": "car", "rel": "has_part", "dst": "seats"}
+{"ts": 1753296237.904468, "op": "ADD_NODE", "node_data": {"name": "drive", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904465, "usage": 0}}}
+{"ts": 1753296237.904542, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "drive"}
+{"ts": 1753296237.904628, "op": "ADD_NODE", "node_data": {"name": "park", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9046211, "usage": 0}}}
+{"ts": 1753296237.90467, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "park"}
+{"ts": 1753296237.9047208, "op": "ADD_NODE", "node_data": {"name": "accelerate", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904716, "usage": 0}}}
+{"ts": 1753296237.904754, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "accelerate"}
+{"ts": 1753296237.904798, "op": "ADD_NODE", "node_data": {"name": "brake", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904795, "usage": 0}}}
+{"ts": 1753296237.904829, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "brake"}
+{"ts": 1753296237.904877, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "turn"}
+{"ts": 1753296237.904937, "op": "ADD_NODE", "node_data": {"name": "be", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.904934, "usage": 0}}}
+{"ts": 1753296237.904968, "op": "ADD_EDGE", "src": "car", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.905215, "op": "ADD_NODE", "node_data": {"name": "bicycle", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.905212, "usage": 0}}}
+{"ts": 1753296237.90525, "op": "ADD_EDGE", "src": "bicycle", "rel": "is_a", "dst": "vehicle"}
+{"ts": 1753296237.90529, "op": "ADD_EDGE", "src": "bicycle", "rel": "has_part", "dst": "wheels"}
+{"ts": 1753296237.905334, "op": "ADD_NODE", "node_data": {"name": "pedals", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.905331, "usage": 0}}}
+{"ts": 1753296237.9053628, "op": "ADD_EDGE", "src": "bicycle", "rel": "has_part", "dst": "pedals"}
+{"ts": 1753296237.9054039, "op": "ADD_NODE", "node_data": {"name": "chain", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.905401, "usage": 0}}}
+{"ts": 1753296237.905432, "op": "ADD_EDGE", "src": "bicycle", "rel": "has_part", "dst": "chain"}
+{"ts": 1753296237.905479, "op": "ADD_EDGE", "src": "bicycle", "rel": "can_do", "dst": "move"}
+{"ts": 1753296237.905547, "op": "ADD_EDGE", "src": "bicycle", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.905608, "op": "ADD_NODE", "node_data": {"name": "bus", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.905605, "usage": 0}}}
+{"ts": 1753296237.905636, "op": "ADD_EDGE", "src": "bus", "rel": "is_a", "dst": "vehicle"}
+{"ts": 1753296237.905699, "op": "ADD_EDGE", "src": "bus", "rel": "has_part", "dst": "seats"}
+{"ts": 1753296237.905746, "op": "ADD_NODE", "node_data": {"name": "carry", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9057431, "usage": 0}}}
+{"ts": 1753296237.905776, "op": "ADD_EDGE", "src": "bus", "rel": "can_do", "dst": "carry"}
+{"ts": 1753296237.905814, "op": "ADD_EDGE", "src": "bus", "rel": "can_do", "dst": "drive"}
+{"ts": 1753296237.9058628, "op": "ADD_NODE", "node_data": {"name": "stop", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9058602, "usage": 0}}}
+{"ts": 1753296237.9058938, "op": "ADD_EDGE", "src": "bus", "rel": "can_do", "dst": "stop"}
+{"ts": 1753296237.905932, "op": "ADD_NODE", "node_data": {"name": "plane", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9059289, "usage": 0}}}
+{"ts": 1753296237.9060018, "op": "ADD_EDGE", "src": "plane", "rel": "is_a", "dst": "vehicle"}
+{"ts": 1753296237.906104, "op": "ADD_NODE", "node_data": {"name": "wings", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9060962, "usage": 0}}}
+{"ts": 1753296237.9061592, "op": "ADD_EDGE", "src": "plane", "rel": "has_part", "dst": "wings"}
+{"ts": 1753296237.9062111, "op": "ADD_EDGE", "src": "plane", "rel": "has_part", "dst": "engine"}
+{"ts": 1753296237.906264, "op": "ADD_NODE", "node_data": {"name": "fly", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906259, "usage": 0}}}
+{"ts": 1753296237.9062982, "op": "ADD_EDGE", "src": "plane", "rel": "can_do", "dst": "fly"}
+{"ts": 1753296237.906345, "op": "ADD_EDGE", "src": "plane", "rel": "can_do", "dst": "carry"}
+{"ts": 1753296237.906402, "op": "ADD_NODE", "node_data": {"name": "boat", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906399, "usage": 0}}}
+{"ts": 1753296237.906435, "op": "ADD_EDGE", "src": "boat", "rel": "is_a", "dst": "vehicle"}
+{"ts": 1753296237.906482, "op": "ADD_NODE", "node_data": {"name": "float", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9064782, "usage": 0}}}
+{"ts": 1753296237.9065118, "op": "ADD_EDGE", "src": "boat", "rel": "can_do", "dst": "float"}
+{"ts": 1753296237.9065542, "op": "ADD_NODE", "node_data": {"name": "hull", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9065511, "usage": 0}}}
+{"ts": 1753296237.906585, "op": "ADD_EDGE", "src": "boat", "rel": "has_part", "dst": "hull"}
+{"ts": 1753296237.9066281, "op": "ADD_NODE", "node_data": {"name": "sail", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906625, "usage": 0}}}
+{"ts": 1753296237.9066591, "op": "ADD_EDGE", "src": "boat", "rel": "can_do", "dst": "sail"}
+{"ts": 1753296237.906697, "op": "ADD_EDGE", "src": "boat", "rel": "can_do", "dst": "carry"}
+{"ts": 1753296237.906763, "op": "ADD_NODE", "node_data": {"name": "sink", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.90676, "usage": 0}}}
+{"ts": 1753296237.906795, "op": "ADD_EDGE", "src": "boat", "rel": "can_do", "dst": "sink"}
+{"ts": 1753296237.906836, "op": "ADD_NODE", "node_data": {"name": "tree", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906833, "usage": 0}}}
+{"ts": 1753296237.906871, "op": "ADD_NODE", "node_data": {"name": "plant", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906868, "usage": 0}}}
+{"ts": 1753296237.906902, "op": "ADD_EDGE", "src": "tree", "rel": "is_a", "dst": "plant"}
+{"ts": 1753296237.906946, "op": "ADD_NODE", "node_data": {"name": "living_entity", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.906943, "usage": 0}}}
+{"ts": 1753296237.906977, "op": "ADD_EDGE", "src": "plant", "rel": "is_a", "dst": "living_entity"}
+{"ts": 1753296237.907018, "op": "ADD_EDGE", "src": "living_entity", "rel": "is_a", "dst": "entity"}
+{"ts": 1753296237.907063, "op": "ADD_NODE", "node_data": {"name": "leaves", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907061, "usage": 0}}}
+{"ts": 1753296237.907095, "op": "ADD_EDGE", "src": "plant", "rel": "has_part", "dst": "leaves"}
+{"ts": 1753296237.90714, "op": "ADD_NODE", "node_data": {"name": "roots", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907137, "usage": 0}}}
+{"ts": 1753296237.907171, "op": "ADD_EDGE", "src": "plant", "rel": "has_part", "dst": "roots"}
+{"ts": 1753296237.9072142, "op": "ADD_NODE", "node_data": {"name": "trunk", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907211, "usage": 0}}}
+{"ts": 1753296237.9072452, "op": "ADD_EDGE", "src": "plant", "rel": "has_part", "dst": "trunk"}
+{"ts": 1753296237.907289, "op": "ADD_NODE", "node_data": {"name": "grow", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907286, "usage": 0}}}
+{"ts": 1753296237.90732, "op": "ADD_EDGE", "src": "plant", "rel": "can_do", "dst": "grow"}
+{"ts": 1753296237.9073842, "op": "ADD_NODE", "node_data": {"name": "provide", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907381, "usage": 0}}}
+{"ts": 1753296237.9074152, "op": "ADD_EDGE", "src": "tree", "rel": "can_do", "dst": "provide"}
+{"ts": 1753296237.907455, "op": "ADD_NODE", "node_data": {"name": "flower", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9074519, "usage": 0}}}
+{"ts": 1753296237.907487, "op": "ADD_EDGE", "src": "flower", "rel": "is_a", "dst": "plant"}
+{"ts": 1753296237.9075499, "op": "ADD_NODE", "node_data": {"name": "petals", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907547, "usage": 0}}}
+{"ts": 1753296237.907583, "op": "ADD_EDGE", "src": "flower", "rel": "has_part", "dst": "petals"}
+{"ts": 1753296237.907628, "op": "ADD_NODE", "node_data": {"name": "bloom", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907625, "usage": 0}}}
+{"ts": 1753296237.90766, "op": "ADD_EDGE", "src": "flower", "rel": "can_do", "dst": "bloom"}
+{"ts": 1753296237.9077241, "op": "ADD_NODE", "node_data": {"name": "wilt", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.907716, "usage": 0}}}
+{"ts": 1753296237.907829, "op": "ADD_EDGE", "src": "flower", "rel": "can_do", "dst": "wilt"}
+{"ts": 1753296237.9079108, "op": "ADD_EDGE", "src": "flower", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.908108, "op": "ADD_NODE", "node_data": {"name": "grass", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908104, "usage": 0}}}
+{"ts": 1753296237.9081721, "op": "ADD_EDGE", "src": "grass", "rel": "is_a", "dst": "plant"}
+{"ts": 1753296237.9082491, "op": "ADD_NODE", "node_data": {"name": "animal", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908245, "usage": 0}}}
+{"ts": 1753296237.908284, "op": "ADD_EDGE", "src": "animal", "rel": "is_a", "dst": "agent"}
+{"ts": 1753296237.908341, "op": "ADD_EDGE", "src": "animal", "rel": "can_do", "dst": "move"}
+{"ts": 1753296237.908389, "op": "ADD_NODE", "node_data": {"name": "eat", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908385, "usage": 0}}}
+{"ts": 1753296237.9084249, "op": "ADD_EDGE", "src": "animal", "rel": "can_do", "dst": "eat"}
+{"ts": 1753296237.908469, "op": "ADD_NODE", "node_data": {"name": "breathe", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908467, "usage": 0}}}
+{"ts": 1753296237.908502, "op": "ADD_EDGE", "src": "animal", "rel": "can_do", "dst": "breathe"}
+{"ts": 1753296237.908545, "op": "ADD_NODE", "node_data": {"name": "mammal", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908542, "usage": 0}}}
+{"ts": 1753296237.908579, "op": "ADD_EDGE", "src": "mammal", "rel": "is_a", "dst": "animal"}
+{"ts": 1753296237.908631, "op": "ADD_NODE", "node_data": {"name": "hair", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908628, "usage": 0}}}
+{"ts": 1753296237.908663, "op": "ADD_EDGE", "src": "mammal", "rel": "has_part", "dst": "hair"}
+{"ts": 1753296237.908711, "op": "ADD_NODE", "node_data": {"name": "bird", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908708, "usage": 0}}}
+{"ts": 1753296237.908766, "op": "ADD_EDGE", "src": "bird", "rel": "is_a", "dst": "animal"}
+{"ts": 1753296237.9088042, "op": "ADD_EDGE", "src": "bird", "rel": "has_part", "dst": "wings"}
+{"ts": 1753296237.90884, "op": "ADD_EDGE", "src": "bird", "rel": "can_do", "dst": "fly"}
+{"ts": 1753296237.9088771, "op": "ADD_NODE", "node_data": {"name": "sing", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908875, "usage": 0}}}
+{"ts": 1753296237.9089038, "op": "ADD_EDGE", "src": "bird", "rel": "can_do", "dst": "sing"}
+{"ts": 1753296237.9089448, "op": "ADD_NODE", "node_data": {"name": "fish", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.908942, "usage": 0}}}
+{"ts": 1753296237.908972, "op": "ADD_EDGE", "src": "fish", "rel": "is_a", "dst": "animal"}
+{"ts": 1753296237.909012, "op": "ADD_NODE", "node_data": {"name": "fins", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909009, "usage": 0}}}
+{"ts": 1753296237.909039, "op": "ADD_EDGE", "src": "fish", "rel": "has_part", "dst": "fins"}
+{"ts": 1753296237.9090781, "op": "ADD_NODE", "node_data": {"name": "swim", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909076, "usage": 0}}}
+{"ts": 1753296237.9091048, "op": "ADD_EDGE", "src": "fish", "rel": "can_do", "dst": "swim"}
+{"ts": 1753296237.909158, "op": "ADD_NODE", "node_data": {"name": "dog", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909156, "usage": 0}}}
+{"ts": 1753296237.909185, "op": "ADD_EDGE", "src": "dog", "rel": "is_a", "dst": "animal"}
+{"ts": 1753296237.909237, "op": "ADD_NODE", "node_data": {"name": "fur", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9092338, "usage": 0}}}
+{"ts": 1753296237.9092638, "op": "ADD_EDGE", "src": "dog", "rel": "has_part", "dst": "fur"}
+{"ts": 1753296237.909301, "op": "ADD_NODE", "node_data": {"name": "tail", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909299, "usage": 0}}}
+{"ts": 1753296237.909328, "op": "ADD_EDGE", "src": "dog", "rel": "has_part", "dst": "tail"}
+{"ts": 1753296237.909367, "op": "ADD_NODE", "node_data": {"name": "legs", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909363, "usage": 0}}}
+{"ts": 1753296237.9093928, "op": "ADD_EDGE", "src": "dog", "rel": "has_part", "dst": "legs"}
+{"ts": 1753296237.9094322, "op": "ADD_NODE", "node_data": {"name": "bark", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.90943, "usage": 0}}}
+{"ts": 1753296237.9094589, "op": "ADD_EDGE", "src": "dog", "rel": "can_do", "dst": "bark"}
+{"ts": 1753296237.909517, "op": "ADD_NODE", "node_data": {"name": "run", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909513, "usage": 0}}}
+{"ts": 1753296237.909581, "op": "ADD_EDGE", "src": "dog", "rel": "can_do", "dst": "run"}
+{"ts": 1753296237.909631, "op": "ADD_NODE", "node_data": {"name": "fetch", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909627, "usage": 0}}}
+{"ts": 1753296237.909665, "op": "ADD_EDGE", "src": "dog", "rel": "can_do", "dst": "fetch"}
+{"ts": 1753296237.909708, "op": "ADD_NODE", "node_data": {"name": "sleep", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909705, "usage": 0}}}
+{"ts": 1753296237.909739, "op": "ADD_EDGE", "src": "dog", "rel": "can_do", "dst": "sleep"}
+{"ts": 1753296237.909777, "op": "ADD_EDGE", "src": "dog", "rel": "can_do", "dst": "swim"}
+{"ts": 1753296237.909823, "op": "ADD_NODE", "node_data": {"name": "cat", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9098198, "usage": 0}}}
+{"ts": 1753296237.909853, "op": "ADD_EDGE", "src": "cat", "rel": "is_a", "dst": "animal"}
+{"ts": 1753296237.909896, "op": "ADD_NODE", "node_data": {"name": "whiskers", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.909893, "usage": 0}}}
+{"ts": 1753296237.9099252, "op": "ADD_EDGE", "src": "cat", "rel": "has_part", "dst": "whiskers"}
+{"ts": 1753296237.909961, "op": "ADD_EDGE", "src": "cat", "rel": "has_part", "dst": "tail"}
+{"ts": 1753296237.9099982, "op": "ADD_EDGE", "src": "cat", "rel": "has_part", "dst": "legs"}
+{"ts": 1753296237.910044, "op": "ADD_NODE", "node_data": {"name": "purr", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910041, "usage": 0}}}
+{"ts": 1753296237.910075, "op": "ADD_EDGE", "src": "cat", "rel": "can_do", "dst": "purr"}
+{"ts": 1753296237.91012, "op": "ADD_NODE", "node_data": {"name": "meow", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9101171, "usage": 0}}}
+{"ts": 1753296237.910151, "op": "ADD_EDGE", "src": "cat", "rel": "can_do", "dst": "meow"}
+{"ts": 1753296237.910193, "op": "ADD_NODE", "node_data": {"name": "jump", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.91019, "usage": 0}}}
+{"ts": 1753296237.910224, "op": "ADD_EDGE", "src": "cat", "rel": "can_do", "dst": "jump"}
+{"ts": 1753296237.91026, "op": "ADD_EDGE", "src": "cat", "rel": "can_do", "dst": "sleep"}
+{"ts": 1753296237.9103098, "op": "ADD_NODE", "node_data": {"name": "hunt", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9103081, "usage": 0}}}
+{"ts": 1753296237.910339, "op": "ADD_EDGE", "src": "cat", "rel": "can_do", "dst": "hunt"}
+{"ts": 1753296237.910383, "op": "ADD_NODE", "node_data": {"name": "human", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910381, "usage": 0}}}
+{"ts": 1753296237.9104111, "op": "ADD_EDGE", "src": "human", "rel": "is_a", "dst": "agent"}
+{"ts": 1753296237.9104671, "op": "ADD_NODE", "node_data": {"name": "walk", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910464, "usage": 0}}}
+{"ts": 1753296237.910497, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "walk"}
+{"ts": 1753296237.910536, "op": "ADD_NODE", "node_data": {"name": "talk", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910534, "usage": 0}}}
+{"ts": 1753296237.9105651, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "talk"}
+{"ts": 1753296237.910605, "op": "ADD_NODE", "node_data": {"name": "think", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910603, "usage": 0}}}
+{"ts": 1753296237.910634, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "think"}
+{"ts": 1753296237.910672, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "learn"}
+{"ts": 1753296237.910712, "op": "ADD_NODE", "node_data": {"name": "hands", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910709, "usage": 0}}}
+{"ts": 1753296237.910742, "op": "ADD_EDGE", "src": "human", "rel": "has_part", "dst": "hands"}
+{"ts": 1753296237.910784, "op": "ADD_NODE", "node_data": {"name": "eyes", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.910781, "usage": 0}}}
+{"ts": 1753296237.9108129, "op": "ADD_EDGE", "src": "human", "rel": "has_part", "dst": "eyes"}
+{"ts": 1753296237.9108539, "op": "ADD_NODE", "node_data": {"name": "see", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9108522, "usage": 0}}}
+{"ts": 1753296237.9108832, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "see"}
+{"ts": 1753296237.910923, "op": "ADD_NODE", "node_data": {"name": "hear", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9109209, "usage": 0}}}
+{"ts": 1753296237.910953, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "hear"}
+{"ts": 1753296237.9109929, "op": "ADD_NODE", "node_data": {"name": "write", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.91099, "usage": 0}}}
+{"ts": 1753296237.9110222, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "write"}
+{"ts": 1753296237.911061, "op": "ADD_NODE", "node_data": {"name": "read", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911059, "usage": 0}}}
+{"ts": 1753296237.9110909, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "read"}
+{"ts": 1753296237.911131, "op": "ADD_NODE", "node_data": {"name": "cook", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911128, "usage": 0}}}
+{"ts": 1753296237.9111922, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "cook"}
+{"ts": 1753296237.911242, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "eat"}
+{"ts": 1753296237.911284, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "sleep"}
+{"ts": 1753296237.911328, "op": "ADD_NODE", "node_data": {"name": "build", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911325, "usage": 0}}}
+{"ts": 1753296237.91136, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "build"}
+{"ts": 1753296237.911401, "op": "ADD_NODE", "node_data": {"name": "code", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911398, "usage": 0}}}
+{"ts": 1753296237.911432, "op": "ADD_EDGE", "src": "human", "rel": "can_do", "dst": "code"}
+{"ts": 1753296237.9114711, "op": "ADD_NODE", "node_data": {"name": "food", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911469, "usage": 0}}}
+{"ts": 1753296237.911506, "op": "ADD_EDGE", "src": "food", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.911595, "op": "ADD_NODE", "node_data": {"name": "apple", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911592, "usage": 0}}}
+{"ts": 1753296237.911633, "op": "ADD_NODE", "node_data": {"name": "fruit", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911631, "usage": 0}}}
+{"ts": 1753296237.9116669, "op": "ADD_EDGE", "src": "apple", "rel": "is_a", "dst": "fruit"}
+{"ts": 1753296237.9117079, "op": "ADD_EDGE", "src": "fruit", "rel": "is_a", "dst": "food"}
+{"ts": 1753296237.911798, "op": "ADD_NODE", "node_data": {"name": "orange", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.911795, "usage": 0}}}
+{"ts": 1753296237.9118369, "op": "ADD_EDGE", "src": "orange", "rel": "is_a", "dst": "fruit"}
+{"ts": 1753296237.911916, "op": "ADD_NODE", "node_data": {"name": "bread", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9119139, "usage": 0}}}
+{"ts": 1753296237.911951, "op": "ADD_EDGE", "src": "bread", "rel": "is_a", "dst": "food"}
+{"ts": 1753296237.912027, "op": "ADD_NODE", "node_data": {"name": "water", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912024, "usage": 0}}}
+{"ts": 1753296237.912062, "op": "ADD_NODE", "node_data": {"name": "drink", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9120588, "usage": 0}}}
+{"ts": 1753296237.912092, "op": "ADD_EDGE", "src": "water", "rel": "is_a", "dst": "drink"}
+{"ts": 1753296237.912135, "op": "ADD_NODE", "node_data": {"name": "liquid", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9121332, "usage": 0}}}
+{"ts": 1753296237.9121668, "op": "ADD_EDGE", "src": "drink", "rel": "is_a", "dst": "liquid"}
+{"ts": 1753296237.912234, "op": "ADD_NODE", "node_data": {"name": "flow", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912231, "usage": 0}}}
+{"ts": 1753296237.91226, "op": "ADD_EDGE", "src": "liquid", "rel": "can_do", "dst": "flow"}
+{"ts": 1753296237.912299, "op": "ADD_EDGE", "src": "water", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.912352, "op": "ADD_NODE", "node_data": {"name": "cup", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912349, "usage": 0}}}
+{"ts": 1753296237.912383, "op": "ADD_NODE", "node_data": {"name": "container", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.91238, "usage": 0}}}
+{"ts": 1753296237.912412, "op": "ADD_EDGE", "src": "cup", "rel": "is_a", "dst": "container"}
+{"ts": 1753296237.912454, "op": "ADD_NODE", "node_data": {"name": "hold", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912452, "usage": 0}}}
+{"ts": 1753296237.9124842, "op": "ADD_EDGE", "src": "container", "rel": "can_do", "dst": "hold"}
+{"ts": 1753296237.9125261, "op": "ADD_EDGE", "src": "cup", "rel": "is_a", "dst": "cup"}
+{"ts": 1753296237.912558, "op": "ADD_EDGE", "src": "cup", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.912601, "op": "ADD_NODE", "node_data": {"name": "book", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912599, "usage": 0}}}
+{"ts": 1753296237.912632, "op": "ADD_EDGE", "src": "book", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.912671, "op": "ADD_NODE", "node_data": {"name": "pages", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912669, "usage": 0}}}
+{"ts": 1753296237.912698, "op": "ADD_EDGE", "src": "book", "rel": "has_part", "dst": "pages"}
+{"ts": 1753296237.912758, "op": "ADD_NODE", "node_data": {"name": "phone", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912755, "usage": 0}}}
+{"ts": 1753296237.912788, "op": "ADD_EDGE", "src": "phone", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.912829, "op": "ADD_NODE", "node_data": {"name": "screen", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9128268, "usage": 0}}}
+{"ts": 1753296237.912856, "op": "ADD_EDGE", "src": "phone", "rel": "has_part", "dst": "screen"}
+{"ts": 1753296237.912894, "op": "ADD_NODE", "node_data": {"name": "battery", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9128919, "usage": 0}}}
+{"ts": 1753296237.9129229, "op": "ADD_EDGE", "src": "phone", "rel": "has_part", "dst": "battery"}
+{"ts": 1753296237.9129632, "op": "ADD_NODE", "node_data": {"name": "call", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.912961, "usage": 0}}}
+{"ts": 1753296237.913003, "op": "ADD_EDGE", "src": "phone", "rel": "can_do", "dst": "call"}
+{"ts": 1753296237.9130418, "op": "ADD_NODE", "node_data": {"name": "message", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9130392, "usage": 0}}}
+{"ts": 1753296237.913069, "op": "ADD_EDGE", "src": "phone", "rel": "can_do", "dst": "message"}
+{"ts": 1753296237.913113, "op": "ADD_NODE", "node_data": {"name": "browse", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.91311, "usage": 0}}}
+{"ts": 1753296237.9131432, "op": "ADD_EDGE", "src": "phone", "rel": "can_do", "dst": "browse"}
+{"ts": 1753296237.9131808, "op": "ADD_NODE", "node_data": {"name": "computer", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9131782, "usage": 0}}}
+{"ts": 1753296237.913214, "op": "ADD_EDGE", "src": "computer", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.913259, "op": "ADD_NODE", "node_data": {"name": "cpu", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913257, "usage": 0}}}
+{"ts": 1753296237.9132879, "op": "ADD_EDGE", "src": "computer", "rel": "has_part", "dst": "cpu"}
+{"ts": 1753296237.9133282, "op": "ADD_NODE", "node_data": {"name": "memory", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913326, "usage": 0}}}
+{"ts": 1753296237.9133599, "op": "ADD_EDGE", "src": "computer", "rel": "has_part", "dst": "memory"}
+{"ts": 1753296237.913397, "op": "ADD_EDGE", "src": "computer", "rel": "has_part", "dst": "screen"}
+{"ts": 1753296237.91344, "op": "ADD_NODE", "node_data": {"name": "compute", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913437, "usage": 0}}}
+{"ts": 1753296237.913468, "op": "ADD_EDGE", "src": "computer", "rel": "can_do", "dst": "compute"}
+{"ts": 1753296237.913506, "op": "ADD_NODE", "node_data": {"name": "connect", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913504, "usage": 0}}}
+{"ts": 1753296237.913534, "op": "ADD_EDGE", "src": "computer", "rel": "can_do", "dst": "connect"}
+{"ts": 1753296237.913574, "op": "ADD_NODE", "node_data": {"name": "store", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9135711, "usage": 0}}}
+{"ts": 1753296237.913601, "op": "ADD_EDGE", "src": "computer", "rel": "can_do", "dst": "store"}
+{"ts": 1753296237.9136379, "op": "ADD_NODE", "node_data": {"name": "software", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9136362, "usage": 0}}}
+{"ts": 1753296237.913667, "op": "ADD_EDGE", "src": "software", "rel": "is_a", "dst": "abstract_entity"}
+{"ts": 1753296237.9137259, "op": "ADD_NODE", "node_data": {"name": "chair", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913724, "usage": 0}}}
+{"ts": 1753296237.913766, "op": "ADD_EDGE", "src": "chair", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.913806, "op": "ADD_EDGE", "src": "chair", "rel": "has_part", "dst": "legs"}
+{"ts": 1753296237.913856, "op": "ADD_EDGE", "src": "chair", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.9139001, "op": "ADD_NODE", "node_data": {"name": "support", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.913897, "usage": 0}}}
+{"ts": 1753296237.913932, "op": "ADD_EDGE", "src": "chair", "rel": "can_do", "dst": "support"}
+{"ts": 1753296237.9139688, "op": "ADD_NODE", "node_data": {"name": "table", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9139671, "usage": 0}}}
+{"ts": 1753296237.914002, "op": "ADD_EDGE", "src": "table", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.914041, "op": "ADD_EDGE", "src": "table", "rel": "has_part", "dst": "legs"}
+{"ts": 1753296237.914081, "op": "ADD_NODE", "node_data": {"name": "surface", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914078, "usage": 0}}}
+{"ts": 1753296237.914111, "op": "ADD_EDGE", "src": "table", "rel": "has_part", "dst": "surface"}
+{"ts": 1753296237.914149, "op": "ADD_EDGE", "src": "table", "rel": "can_do", "dst": "hold"}
+{"ts": 1753296237.914186, "op": "ADD_NODE", "node_data": {"name": "bed", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914183, "usage": 0}}}
+{"ts": 1753296237.914216, "op": "ADD_EDGE", "src": "bed", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.9142652, "op": "ADD_NODE", "node_data": {"name": "mattress", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914262, "usage": 0}}}
+{"ts": 1753296237.914293, "op": "ADD_EDGE", "src": "bed", "rel": "has_part", "dst": "mattress"}
+{"ts": 1753296237.914334, "op": "ADD_NODE", "node_data": {"name": "frame", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914331, "usage": 0}}}
+{"ts": 1753296237.914363, "op": "ADD_EDGE", "src": "bed", "rel": "has_part", "dst": "frame"}
+{"ts": 1753296237.914403, "op": "ADD_NODE", "node_data": {"name": "door", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9144, "usage": 0}}}
+{"ts": 1753296237.914431, "op": "ADD_EDGE", "src": "door", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.914475, "op": "ADD_NODE", "node_data": {"name": "open", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9144719, "usage": 0}}}
+{"ts": 1753296237.91451, "op": "ADD_EDGE", "src": "door", "rel": "can_do", "dst": "open"}
+{"ts": 1753296237.9145489, "op": "ADD_NODE", "node_data": {"name": "close", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914547, "usage": 0}}}
+{"ts": 1753296237.91459, "op": "ADD_EDGE", "src": "door", "rel": "can_do", "dst": "close"}
+{"ts": 1753296237.914638, "op": "ADD_NODE", "node_data": {"name": "lock", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914635, "usage": 0}}}
+{"ts": 1753296237.914668, "op": "ADD_EDGE", "src": "door", "rel": "can_do", "dst": "lock"}
+{"ts": 1753296237.914818, "op": "ADD_NODE", "node_data": {"name": "window", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.914815, "usage": 0}}}
+{"ts": 1753296237.914874, "op": "ADD_EDGE", "src": "window", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.914932, "op": "ADD_EDGE", "src": "window", "rel": "can_do", "dst": "open"}
+{"ts": 1753296237.914985, "op": "ADD_EDGE", "src": "window", "rel": "can_do", "dst": "close"}
+{"ts": 1753296237.915047, "op": "ADD_NODE", "node_data": {"name": "light", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915043, "usage": 0}}}
+{"ts": 1753296237.915089, "op": "ADD_EDGE", "src": "light", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.915145, "op": "ADD_EDGE", "src": "light", "rel": "can_do", "dst": "be"}
+{"ts": 1753296237.91522, "op": "ADD_NODE", "node_data": {"name": "switch", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915217, "usage": 0}}}
+{"ts": 1753296237.915257, "op": "ADD_EDGE", "src": "switch", "rel": "is_a", "dst": "object"}
+{"ts": 1753296237.915305, "op": "ADD_NODE", "node_data": {"name": "toggle", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9153018, "usage": 0}}}
+{"ts": 1753296237.915338, "op": "ADD_EDGE", "src": "switch", "rel": "can_do", "dst": "toggle"}
+{"ts": 1753296237.915385, "op": "ADD_EDGE", "src": "switch", "rel": "can_do", "dst": "turn"}
+{"ts": 1753296237.9154391, "op": "ADD_NODE", "node_data": {"name": "sound", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915436, "usage": 0}}}
+{"ts": 1753296237.915481, "op": "ADD_NODE", "node_data": {"name": "event", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915478, "usage": 0}}}
+{"ts": 1753296237.915516, "op": "ADD_EDGE", "src": "sound", "rel": "is_a", "dst": "event"}
+{"ts": 1753296237.915566, "op": "ADD_NODE", "node_data": {"name": "occur", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915564, "usage": 0}}}
+{"ts": 1753296237.915599, "op": "ADD_EDGE", "src": "event", "rel": "can_do", "dst": "occur"}
+{"ts": 1753296237.915649, "op": "ADD_NODE", "node_data": {"name": "start", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9156458, "usage": 0}}}
+{"ts": 1753296237.915684, "op": "ADD_EDGE", "src": "event", "rel": "can_do", "dst": "start"}
+{"ts": 1753296237.915732, "op": "ADD_NODE", "node_data": {"name": "end", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9157288, "usage": 0}}}
+{"ts": 1753296237.9157782, "op": "ADD_EDGE", "src": "event", "rel": "can_do", "dst": "end"}
+{"ts": 1753296237.9158132, "op": "ADD_NODE", "node_data": {"name": "conversation", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915811, "usage": 0}}}
+{"ts": 1753296237.91584, "op": "ADD_EDGE", "src": "conversation", "rel": "is_a", "dst": "event"}
+{"ts": 1753296237.915888, "op": "ADD_NODE", "node_data": {"name": "language", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915885, "usage": 0}}}
+{"ts": 1753296237.915915, "op": "ADD_EDGE", "src": "language", "rel": "is_a", "dst": "abstract_entity"}
+{"ts": 1753296237.915956, "op": "ADD_NODE", "node_data": {"name": "convey", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.915953, "usage": 0}}}
+{"ts": 1753296237.916001, "op": "ADD_EDGE", "src": "language", "rel": "can_do", "dst": "convey"}
+{"ts": 1753296237.916058, "op": "ADD_NODE", "node_data": {"name": "idea", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916055, "usage": 0}}}
+{"ts": 1753296237.916084, "op": "ADD_EDGE", "src": "idea", "rel": "is_a", "dst": "abstract_entity"}
+{"ts": 1753296237.91613, "op": "ADD_NODE", "node_data": {"name": "form", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916127, "usage": 0}}}
+{"ts": 1753296237.9161558, "op": "ADD_EDGE", "src": "idea", "rel": "can_do", "dst": "form"}
+{"ts": 1753296237.916193, "op": "ADD_EDGE", "src": "idea", "rel": "can_do", "dst": "change"}
+{"ts": 1753296237.916229, "op": "ADD_NODE", "node_data": {"name": "inspire", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916227, "usage": 0}}}
+{"ts": 1753296237.916256, "op": "ADD_EDGE", "src": "idea", "rel": "can_do", "dst": "inspire"}
+{"ts": 1753296237.916291, "op": "ADD_NODE", "node_data": {"name": "question", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916288, "usage": 0}}}
+{"ts": 1753296237.916318, "op": "ADD_EDGE", "src": "question", "rel": "is_a", "dst": "concept"}
+{"ts": 1753296237.916359, "op": "ADD_NODE", "node_data": {"name": "ask", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916356, "usage": 0}}}
+{"ts": 1753296237.916385, "op": "ADD_EDGE", "src": "question", "rel": "can_do", "dst": "ask"}
+{"ts": 1753296237.916426, "op": "ADD_NODE", "node_data": {"name": "answer", "ctype": "entity", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.9164228, "usage": 0}}}
+{"ts": 1753296237.9164522, "op": "ADD_EDGE", "src": "answer", "rel": "is_a", "dst": "concept"}
+{"ts": 1753296237.9165041, "op": "ADD_NODE", "node_data": {"name": "satisfy", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916502, "usage": 0}}}
+{"ts": 1753296237.916532, "op": "ADD_EDGE", "src": "answer", "rel": "can_do", "dst": "satisfy"}
+{"ts": 1753296237.916571, "op": "ADD_NODE", "node_data": {"name": "inform", "ctype": "event", "inherits_from": [], "properties": {}, "property_stats": {}, "structure": {}, "relations": {}, "functions": {}, "logic": {}, "activation": 0.0, "priors": {}, "metadata": {"created": 1753296237.916569, "usage": 0}}}
+{"ts": 1753296237.916598, "op": "ADD_EDGE", "src": "answer", "rel": "can_do", "dst": "inform"}

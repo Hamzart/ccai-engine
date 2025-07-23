@@ -1,0 +1,54 @@
+# ccai/core/subsystems/property.py
+
+import uuid
+from typing import List, Tuple
+
+from ccai.core.models import Signal, ConceptNode
+from ccai.core.subsystems.base import Subsystem
+
+class PropertyResolver(Subsystem):
+    """
+    A subsystem that finds properties of a concept, including those
+    inherited from its parents.
+    """
+    def evaluate(
+        self, signal: Signal, node: ConceptNode
+    ) -> Tuple[float, List[Signal]]:
+        
+        new_signals = []
+        confidence_delta = 0.0
+
+        # Check if the signal is a query for properties
+        if signal.purpose != "QUERY" or signal.payload.get("ask") != "relation.has_property":
+            return confidence_delta, new_signals
+
+        # 1. Find properties directly on the current node
+        if node.properties:
+            for prop_type, prop_specs in node.properties.items():
+                for spec in prop_specs:
+                    answer_text = f"{prop_type}: {spec.value}"
+                    answer_signal = self._create_answer_signal(signal, node, answer_text)
+                    new_signals.append(answer_signal)
+
+        # 2. Create new signals to check the parents for more properties
+        parent_names = node.relations.get("is_a", []) + node.inherits_from
+        for parent_name in parent_names:
+            # Create a new signal to continue the search up the chain
+            recursive_signal = signal.model_copy(deep=True)
+            recursive_signal.id = uuid.uuid4()
+            recursive_signal.history.append((node.name, "checking_parent", recursive_signal.confidence))
+            recursive_signal.confidence *= 0.98 # Slight decay for indirect properties
+            
+            # The 'answer' here is the next node to visit
+            recursive_signal.payload['answer'] = parent_name
+            new_signals.append(recursive_signal)
+            
+        return confidence_delta, new_signals
+
+    def _create_answer_signal(self, original_signal: Signal, at_node: ConceptNode, answer: str) -> Signal:
+        """Helper to create a final answer signal."""
+        answer_signal = original_signal.model_copy(deep=True)
+        answer_signal.id = uuid.uuid4()
+        answer_signal.history.append((at_node.name, "found_property", answer_signal.confidence))
+        answer_signal.payload['final_answer'] = answer
+        return answer_signal

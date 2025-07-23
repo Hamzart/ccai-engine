@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ccai"
+version = "0.1.0"
+description = "Cognitive-Concept AI Engine"
+authors = ["Hamza Trabelsi <you@example.com>"]
+readme = "README.md"
+packages = [{include = "ccai"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = ">=2.0"
+spacy = ">=3.7"
+fastapi = ">=0.111"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+msgpack = ">=1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,349 @@
+A object is an entity.
+An entity can exist.
+An entity can change.
+
+A physical_entity is an entity.
+A physical_entity has mass.
+A physical_entity has volume.
+A physical_entity occupies space.
+
+A abstract_entity is an entity.
+An abstract_entity has concept.
+An abstract_entity has meaning.
+
+A agent is an entity.
+An agent is intentional.
+An agent can act.
+An agent can decide.
+An agent can learn.
+
+A place is an entity.
+A place has location.
+A place can contain entity.
+A place can be visited.
+
+A tool is an object.
+A tool has function.
+A tool is used for work.
+A tool can be held.
+A tool can break.
+A tool can wear out.
+
+A weapon is a tool.
+A weapon can harm.
+A weapon is used for defense.
+A weapon is used for attack.
+
+A knife is a weapon.
+A knife is a tool.
+A knife has blade.
+A knife has handle.
+A knife is sharp.
+A knife can cut.
+A knife is used for cut.
+
+A sword is a weapon.
+A sword has blade.
+A sword has hilt.
+A sword is sharp.
+A sword can cut.
+A sword can thrust.
+
+A hammer is a tool.
+A hammer has head.
+A hammer has handle.
+A hammer can hit.
+A hammer is used for build.
+A hammer can break rock.
+
+A screwdriver is a tool.
+A screwdriver has shaft.
+A screwdriver has handle.
+A screwdriver can turn.
+A screwdriver is used for screw.
+A screwdriver is used for fix.
+
+A wrench is a tool.
+A wrench can twist.
+A wrench is used for tighten.
+A wrench is used for loosen.
+
+A car is a vehicle.
+A vehicle is a tool.
+A vehicle is an object.
+A vehicle is used for transport.
+A vehicle can move.
+A vehicle needs fuel.
+A vehicle has engine.
+A vehicle has wheels.
+
+A car has four wheels.
+A car has doors.
+A car has seats.
+A car can drive.
+A car can park.
+A car can accelerate.
+A car can brake.
+A car can turn.
+A car is metallic.
+A car can be red.
+A car can be blue.
+A car can be fast.
+A car can be slow.
+A fast car is red.
+
+A bicycle is a vehicle.
+A bicycle has two wheels.
+A bicycle has pedals.
+A bicycle has chain.
+A bicycle can move.
+A bicycle is powered by agent.
+A bicycle can be light.
+A bicycle can be heavy.
+
+A bus is a vehicle.
+A bus has many seats.
+A bus can carry people.
+A bus can drive.
+A bus is large.
+A bus can stop.
+
+A plane is a vehicle.
+A plane has wings.
+A plane has engine.
+A plane can fly.
+A plane needs runway.
+A plane can carry passengers.
+A plane is fast.
+
+A boat is a vehicle.
+A boat can float.
+A boat has hull.
+A boat can sail.
+A boat can carry cargo.
+A boat can sink.
+
+A tree is a plant.
+A plant is a living_entity.
+A living_entity is an entity.
+A plant has leaves.
+A plant has roots.
+A plant has trunk.
+A plant can grow.
+A plant is alive.
+A tree produces fruit.
+A tree can provide shade.
+
+A flower is a plant.
+A flower has petals.
+A flower can bloom.
+A flower can wilt.
+A flower is colorful.
+A flower can be red.
+A flower can be yellow.
+A flower can be white.
+
+A grass is a plant.
+A grass is green.
+A grass covers ground.
+A grass grows.
+
+A animal is an agent.
+An animal is alive.
+An animal can move.
+An animal can eat.
+An animal can breathe.
+
+A mammal is an animal.
+A mammal is warm_blooded.
+A mammal has hair.
+A mammal gives birth.
+
+A bird is an animal.
+A bird has wings.
+A bird can fly.
+A bird can sing.
+A bird lays eggs.
+
+A fish is an animal.
+A fish has fins.
+A fish can swim.
+A fish lives in water.
+A fish lays eggs.
+
+A dog is a mammal.
+A dog is an animal.
+A dog is alive.
+A dog has fur.
+A dog has tail.
+A dog has four legs.
+A dog can bark.
+A dog can run.
+A dog can fetch.
+A dog can sleep.
+A dog can swim.
+
+A cat is a mammal.
+A cat is an animal.
+A cat has whiskers.
+A cat has tail.
+A cat has four legs.
+A cat can purr.
+A cat can meow.
+A cat can jump.
+A cat can sleep.
+A cat can hunt mice.
+
+A human is a mammal.
+A human is an agent.
+A human can walk.
+A human can talk.
+A human can think.
+A human can learn.
+A human has hands.
+A human has eyes.
+A human can see.
+A human can hear.
+A human can write.
+A human can read.
+A human can cook.
+A human can eat.
+A human can sleep.
+A human can build.
+A human can code.
+
+A food is an object.
+A food is edible.
+A food can be eaten.
+A food can be cooked.
+A food can be thrown.
+A food can be shared.
+A food gives energy.
+A food decays.
+
+An apple is a fruit.
+A fruit is food.
+A fruit can be eaten.
+A fruit is sweet.
+An apple is red.
+An apple is crisp.
+An apple grows on tree.
+
+An orange is a fruit.
+A fruit is food.
+A fruit can be eaten.
+An orange is orange.
+An orange is juicy.
+An orange grows on tree.
+
+A bread is food.
+A bread can be baked.
+A bread can be sliced.
+A bread is soft.
+A bread can be toasted.
+
+A water is a drink.
+A drink is a liquid.
+A liquid can flow.
+A water can be drunk.
+A water is clear.
+A water is wet.
+
+A cup is a container.
+A container can hold liquid.
+A cup has handle.
+A cup can be cups.
+A cup is used for drink.
+
+A book is an object.
+A book has pages.
+A book has cover.
+A book can be read.
+A book can be written.
+A book contains information.
+
+A phone is an object.
+A phone has screen.
+A phone has battery.
+A phone can call.
+A phone can message.
+A phone can browse.
+
+A computer is an object.
+A computer has CPU.
+A computer has memory.
+A computer has screen.
+A computer can compute.
+A computer can connect.
+A computer can store data.
+
+A software is an abstract_entity.
+A software runs on computer.
+A software can be installed.
+A software can be updated.
+
+A chair is an object.
+A chair has legs.
+A chair has back.
+A chair can be sat_on.
+A chair can support weight.
+
+A table is an object.
+A table has legs.
+A table has surface.
+A table can hold objects.
+
+A bed is an object.
+A bed is used for sleep.
+A bed has mattress.
+A bed has frame.
+
+A door is an object.
+A door can open.
+A door can close.
+A door has handle.
+A door can lock.
+
+A window is an object.
+A window can open.
+A window can close.
+A window is transparent.
+
+A light is an object.
+A light emits light.
+A light can be on.
+A light can be off.
+A light is bright.
+A light is dim.
+
+A switch is an object.
+A switch can toggle.
+A switch can turn on.
+A switch can turn off.
+
+A sound is an event.
+An event can occur.
+An event can start.
+An event can end.
+
+A conversation is an event.
+A conversation involves agent.
+A conversation uses language.
+
+A language is an abstract_entity.
+A language can convey information.
+A language can be spoken.
+A language can be written.
+
+A idea is an abstract_entity.
+An idea can form.
+An idea can change.
+An idea can inspire.
+
+A question is an concept.
+A question can ask.
+A question can be answered.
+
+A answer is an concept.
+An answer can satisfy question.
+An answer can inform.
