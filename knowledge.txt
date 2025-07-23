@@ -69,6 +69,7 @@ A wrench is used for tighten.
 A wrench is used for loosen.
 
 A car is a vehicle.
+A car is also called an automobile.
 A vehicle is a tool.
 A vehicle is an object.
 A vehicle is used for transport.
@@ -172,6 +173,7 @@ A fish lives in water.
 A fish lays eggs.
 
 A dog is a mammal.
+A dog is also called a canine.
 A dog is an animal.
 A dog is alive.
 A dog has fur.

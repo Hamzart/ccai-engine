@@ -26,3 +26,6 @@ def test_extract_alias(tmp_path):
     car = graph.get_node("car")
     assert car is not None
     assert "automobile" in car.aliases
+    # Alias lookup should also return the original node
+    auto = graph.get_node("automobile")
+    assert auto is car

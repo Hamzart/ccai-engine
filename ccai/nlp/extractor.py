@@ -133,6 +133,17 @@ class InformationExtractor:
                     node.properties[prop_category] = new_specs
 
     def _extract_alias(self, sent: Doc):
+        """Extract alias statements like 'X is called Y' or 'X is known as Y'."""
+        for token in sent:
+            if token.dep_ == "ROOT" and token.lemma_ in {"call", "know"}:
+                subject = next((c for c in token.children if c.dep_ in ("nsubj", "nsubjpass")), None)
+                obj = None
+                if token.lemma_ == "call":
+                    obj = next((c for c in token.children if c.dep_ in ("dobj", "attr", "oprd")), None)
+                else:  # "known as"
+                    prep = next((c for c in token.children if c.dep_ == "prep" and c.text.lower() == "as"), None)
+                    if prep:
+                        obj = next(prep.children, None)
         """Extracts simple alias statements like 'X is called Y'."""
         for token in sent:
             if token.lemma_ == "call" and token.dep_ == "ROOT":

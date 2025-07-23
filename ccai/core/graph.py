@@ -24,8 +24,17 @@ class ConceptGraph:
             self._replay_mutations(mutations)
     
     def get_node(self, name: str) -> Optional[ConceptNode]:
-        """Retrieves a node from the graph by its unique name."""
-        return self._nodes.get(name)
+        """Retrieves a node by name or any of its aliases."""
+        clean = name.lower().strip()
+        node = self._nodes.get(clean)
+        if node:
+            return node
+
+        for n in self._nodes.values():
+            if clean in [a.lower() for a in n.aliases]:
+                return n
+
+        return None
 
     def add_node(self, node: ConceptNode):
         """Adds a new node to the graph and logs the mutation."""
