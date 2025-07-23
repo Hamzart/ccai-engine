@@ -2,6 +2,8 @@
 
 from typing import List
 
+from ccai.core.signal_hub import SignalHub
+
 from ccai.core.graph import ConceptGraph
 from ccai.core.models import Signal
 from ccai.core.subsystems.base import Subsystem
@@ -16,28 +18,27 @@ class ReasoningCore:
         self.graph = graph
         self.subsystems = subsystems
 
-    def process_signal(self, initial_signal: Signal) -> List[Signal]:
-        """
-        Processes an initial signal by sending it to all subsystems
-        and returns a list of all resulting answer signals.
-        """
-        
-        # The signal starts at its origin node.
-        current_node = self.graph.get_node(initial_signal.origin)
-        if not current_node:
-            return []
+    def process_signal(self, initial_signal: Signal, threshold: float = 0.1) -> List[Signal]:
+        """Processes a signal queue until exhausted or below confidence."""
+        hub = SignalHub()
+        hub.push(initial_signal)
+        answers: List[Signal] = []
 
-        all_results = []
-        
-        # Dispatch the signal to all registered subsystems
-        for subsystem in self.subsystems:
-            # Subsystems are now responsible for their own logic, including recursion.
-            confidence_delta, results = subsystem.evaluate(initial_signal, current_node)
-            
-            # We can apply the confidence delta if needed in the future
-            # initial_signal.confidence += confidence_delta
+        while not hub.empty():
+            signal = hub.pop()
+            if not signal or signal.confidence < threshold:
+                continue
+            node = self.graph.get_node(signal.origin)
+            if not node:
+                continue
 
-            if results:
-                all_results.extend(results)
+            for subsystem in self.subsystems:
+                delta, new_sigs = subsystem.evaluate(signal, node)
+                signal.confidence += delta
+                for ns in new_sigs:
+                    hub.push(ns)
+                for ns in new_sigs:
+                    if "final_answer" in ns.payload or ns.payload.get("confirmed"):
+                        answers.append(ns)
 
-        return all_results
+        return answers

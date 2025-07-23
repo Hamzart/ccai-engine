@@ -5,7 +5,6 @@ import typer
 from rich import print, print_json
 
 from ccai.core.graph import ConceptGraph
-from ccai.core.models import ConceptNode
 from ccai.nlp.extractor import InformationExtractor
 from ccai.nlp.primitives import PrimitiveManager
 

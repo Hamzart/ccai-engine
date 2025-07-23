@@ -35,7 +35,11 @@ class ConceptNode(BaseModel):
     activation: float = 0.0
     priors: Dict[str, float] = Field(default_factory=dict)
     metadata: Dict[str, Any] = Field(
-        default_factory=lambda: {"created": time.time(), "usage": 0}
+        default_factory=lambda: {
+            "created": time.time(),
+            "last_updated": time.time(),
+            "usage": 0,
+        }
     )
 
 class Signal(BaseModel):
