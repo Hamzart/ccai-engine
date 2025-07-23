@@ -33,21 +33,24 @@ class InheritanceResolver(Subsystem):
         if signal.purpose == "VERIFY" and signal.payload.get("relation") == "is_a":
             # Check if the target is a direct parent of the current node
             if signal.payload.get("target") in parent_names:
-                # Fact is confirmed! Create a final confirmation signal.
                 confirmation_signal = signal.model_copy()
                 confirmation_signal.id = uuid.uuid4()
                 confirmation_signal.payload['confirmed'] = True
                 new_signals.append(confirmation_signal)
-                # Return immediately, no need to search further up this path
                 return confidence_delta, new_signals
 
-            # If not a direct parent, create recursive signals to check grandparents
+            # Track visited nodes to prevent infinite loops
+            visited = set(signal.constraints.get("visited", []))
+            visited.add(node.name)
+
+            # Recurse up the hierarchy to verify against ancestors
             for parent_name in parent_names:
-                recursive_signal = signal.model_copy(deep=True)
-                recursive_signal.id = uuid.uuid4()
-                recursive_signal.history.append((node.name, "verifying_parent", recursive_signal.confidence))
-                # The 'answer' is the next node to visit for verification
-                recursive_signal.payload['answer'] = parent_name
-                new_signals.append(recursive_signal)
+                if parent_name not in visited:
+                    recursive_signal = signal.model_copy(deep=True)
+                    recursive_signal.id = uuid.uuid4()
+                    recursive_signal.origin = parent_name
+                    recursive_signal.history.append((node.name, "verifying_parent", recursive_signal.confidence))
+                    recursive_signal.constraints["visited"] = list(visited)
+                    new_signals.append(recursive_signal)
 
         return confidence_delta, new_signals
