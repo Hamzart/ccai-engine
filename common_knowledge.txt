@@ -1,0 +1,1140 @@
+# Common Knowledge for CCAI Chatbot
+
+# Basic Concepts
+A concept is an abstract_entity.
+A concept has meaning.
+A concept can be understood.
+A concept can be explained.
+
+# Time Concepts
+A time is an abstract_entity.
+A time can be measured.
+A time can pass.
+A time can be tracked.
+A second is a time.
+A minute is a time.
+A minute has 60 seconds.
+An hour is a time.
+An hour has 60 minutes.
+A day is a time.
+A day has 24 hours.
+A week is a time.
+A week has 7 days.
+A month is a time.
+A month has approximately 30 days.
+A year is a time.
+A year has 12 months.
+A year has 365 days.
+A decade is a time.
+A decade has 10 years.
+A century is a time.
+A century has 100 years.
+
+# Colors
+A color is a property.
+A color can be seen.
+A color can be mixed.
+Red is a color.
+Blue is a color.
+Green is a color.
+Yellow is a color.
+Orange is a color.
+Purple is a color.
+Black is a color.
+White is a color.
+Gray is a color.
+Brown is a color.
+Pink is a color.
+
+# Shapes
+A shape is a property.
+A shape can be drawn.
+A shape has dimensions.
+A circle is a shape.
+A circle is round.
+A square is a shape.
+A square has four equal sides.
+A triangle is a shape.
+A triangle has three sides.
+A rectangle is a shape.
+A rectangle has four sides.
+A rectangle has two long sides and two short sides.
+A sphere is a shape.
+A sphere is three-dimensional.
+A sphere is round.
+A cube is a shape.
+A cube has six square faces.
+A cube is three-dimensional.
+
+# Elements
+An element is a substance.
+A substance is a physical_entity.
+An element is found in nature.
+An element has properties.
+Oxygen is an element.
+Oxygen is a gas.
+Oxygen is needed for breathing.
+Hydrogen is an element.
+Hydrogen is a gas.
+Carbon is an element.
+Carbon is found in all living things.
+Gold is an element.
+Gold is a metal.
+Gold is valuable.
+Silver is an element.
+Silver is a metal.
+Iron is an element.
+Iron is a metal.
+Iron is used to make steel.
+
+# Weather
+Weather is a phenomenon.
+A phenomenon is an event.
+Weather can change.
+Weather can be predicted.
+Rain is a weather phenomenon.
+Rain is water falling from clouds.
+Snow is a weather phenomenon.
+Snow is frozen water falling from clouds.
+Wind is a weather phenomenon.
+Wind is moving air.
+Storm is a weather phenomenon.
+Storm has strong wind.
+Storm often has rain or snow.
+Lightning is a weather phenomenon.
+Lightning is an electrical discharge.
+Thunder is a weather phenomenon.
+Thunder is the sound caused by lightning.
+Fog is a weather phenomenon.
+Fog is a cloud near the ground.
+
+# Geography
+Geography is a field of study.
+Geography studies the Earth.
+A continent is a large landmass.
+A continent has many countries.
+Africa is a continent.
+Asia is a continent.
+Europe is a continent.
+North America is a continent.
+South America is a continent.
+Australia is a continent.
+Antarctica is a continent.
+An ocean is a large body of water.
+The Pacific Ocean is an ocean.
+The Atlantic Ocean is an ocean.
+The Indian Ocean is an ocean.
+The Arctic Ocean is an ocean.
+The Southern Ocean is an ocean.
+A mountain is a landform.
+A mountain is very high.
+A river is a flowing body of water.
+A lake is a body of water surrounded by land.
+A desert is a dry area.
+A forest is an area with many trees.
+
+# Technology
+Technology is a field.
+Technology involves tools and machines.
+A computer is a technology.
+A computer can process information.
+A computer has hardware and software.
+Hardware is the physical parts of a computer.
+Software is the programs that run on a computer.
+The internet is a technology.
+The internet connects computers globally.
+A smartphone is a technology.
+A smartphone is a portable computer.
+A smartphone can make calls.
+A smartphone can access the internet.
+Artificial intelligence is a technology.
+Artificial intelligence can learn.
+Artificial intelligence can solve problems.
+A robot is a technology.
+A robot can perform tasks.
+A robot can be autonomous.
+
+# Human Body
+A body is the physical structure of a human.
+A body has many parts.
+A head is part of a body.
+A head contains the brain.
+A brain is an organ.
+A brain controls the body.
+A brain can think.
+A heart is an organ.
+A heart pumps blood.
+A lung is an organ.
+Lungs are used for breathing.
+A stomach is an organ.
+A stomach digests food.
+An arm is a limb.
+An arm is used for grasping.
+A leg is a limb.
+A leg is used for walking.
+A hand is part of an arm.
+A hand has fingers.
+A foot is part of a leg.
+A foot has toes.
+
+# Emotions
+An emotion is a feeling.
+A feeling is experienced by humans.
+Happiness is an emotion.
+Happiness feels good.
+Sadness is an emotion.
+Sadness feels bad.
+Anger is an emotion.
+Anger can be intense.
+Fear is an emotion.
+Fear is a response to danger.
+Love is an emotion.
+Love is a strong affection.
+Hate is an emotion.
+Hate is a strong dislike.
+Surprise is an emotion.
+Surprise is a reaction to something unexpected.
+Disgust is an emotion.
+Disgust is a strong aversion.
+
+# Food
+Food is a substance.
+Food is eaten.
+Food provides energy.
+Food can be cooked.
+Fruit is a food.
+Fruit grows on plants.
+Fruit is often sweet.
+Vegetable is a food.
+Vegetable is a plant part.
+Meat is a food.
+Meat comes from animals.
+Bread is a food.
+Bread is made from flour.
+Rice is a food.
+Rice is a grain.
+Pasta is a food.
+Pasta is made from flour.
+Cheese is a food.
+Cheese is made from milk.
+Milk is a food.
+Milk comes from animals.
+Water is a drink.
+Water is essential for life.
+
+# Transportation
+Transportation is a method of moving.
+A vehicle is used for transportation.
+A car is a vehicle.
+A car has four wheels.
+A car has an engine.
+A bicycle is a vehicle.
+A bicycle has two wheels.
+A bicycle is powered by pedaling.
+A train is a vehicle.
+A train runs on tracks.
+A plane is a vehicle.
+A plane can fly.
+A plane has wings.
+A boat is a vehicle.
+A boat floats on water.
+A ship is a large boat.
+A bus is a vehicle.
+A bus can carry many people.
+A motorcycle is a vehicle.
+A motorcycle has two wheels.
+A motorcycle has an engine.
+
+# Communication
+Communication is the exchange of information.
+Communication can be verbal.
+Communication can be written.
+Communication can be visual.
+Language is used for communication.
+Language has words.
+Language has grammar.
+Speaking is a form of communication.
+Speaking uses voice.
+Writing is a form of communication.
+Writing uses symbols.
+A letter is a written communication.
+An email is a digital communication.
+A phone call is a verbal communication.
+A gesture is a visual communication.
+A gesture uses body movements.
+A sign is a visual communication.
+A sign has meaning.
+
+# Education
+Education is the process of learning.
+Education can be formal.
+Education can be informal.
+A school is a place for education.
+A school has teachers.
+A school has students.
+A teacher is a person who educates.
+A teacher has knowledge.
+A student is a person who learns.
+A student gains knowledge.
+A book is a source of knowledge.
+A book contains information.
+A subject is a field of study.
+Mathematics is a subject.
+Mathematics involves numbers.
+Science is a subject.
+Science studies the natural world.
+History is a subject.
+History studies the past.
+Art is a subject.
+Art involves creativity.
+
+# Animals
+An animal is a living organism.
+An animal can move.
+An animal can sense.
+A mammal is an animal.
+A mammal has fur or hair.
+A mammal feeds milk to its young.
+A bird is an animal.
+A bird has feathers.
+A bird can fly.
+A fish is an animal.
+A fish lives in water.
+A fish has fins.
+A reptile is an animal.
+A reptile has scales.
+A snake is a reptile.
+A snake has no legs.
+A lizard is a reptile.
+A lizard has four legs.
+An amphibian is an animal.
+A frog is an amphibian.
+A frog can live on land and in water.
+An insect is an animal.
+An insect has six legs.
+A spider is an animal.
+A spider has eight legs.
+
+# Plants
+A plant is a living organism.
+A plant can grow.
+A plant needs sunlight.
+A plant needs water.
+A tree is a plant.
+A tree has a trunk.
+A tree has branches.
+A tree has leaves.
+A flower is a plant.
+A flower can bloom.
+A flower has petals.
+Grass is a plant.
+Grass is green.
+Grass covers the ground.
+A vegetable is a plant part.
+A fruit is a plant part.
+A seed is a plant part.
+A seed can grow into a new plant.
+A root is a plant part.
+A root absorbs water.
+A leaf is a plant part.
+A leaf absorbs sunlight.
+
+# Sports
+A sport is an activity.
+A sport involves physical exertion.
+A sport has rules.
+Football is a sport.
+Football is played with a ball.
+Basketball is a sport.
+Basketball involves shooting a ball through a hoop.
+Baseball is a sport.
+Baseball is played with a bat and ball.
+Tennis is a sport.
+Tennis is played with rackets and a ball.
+Swimming is a sport.
+Swimming is done in water.
+Running is a sport.
+Running is moving quickly on foot.
+Cycling is a sport.
+Cycling is riding a bicycle.
+Golf is a sport.
+Golf involves hitting a ball into holes.
+Soccer is a sport.
+Soccer is played with a ball kicked by foot.
+
+# Music
+Music is an art form.
+Music uses sound.
+Music has rhythm.
+Music has melody.
+A song is a piece of music.
+A song often has lyrics.
+An instrument is used to make music.
+A piano is an instrument.
+A piano has keys.
+A guitar is an instrument.
+A guitar has strings.
+A drum is an instrument.
+A drum is hit to make sound.
+A violin is an instrument.
+A violin has four strings.
+A flute is an instrument.
+A flute is blown into.
+A singer is a person who sings.
+A composer is a person who writes music.
+A band is a group of musicians.
+An orchestra is a large group of musicians.
+
+# Art
+Art is a form of expression.
+Art can be visual.
+Art can be auditory.
+Art can be physical.
+Painting is a form of art.
+Painting uses colors on a surface.
+Drawing is a form of art.
+Drawing uses lines.
+Sculpture is a form of art.
+Sculpture is three-dimensional.
+Photography is a form of art.
+Photography captures images.
+Dance is a form of art.
+Dance uses body movements.
+Theater is a form of art.
+Theater involves acting.
+Literature is a form of art.
+Literature uses written words.
+Poetry is a form of literature.
+Poetry often has rhythm.
+Fiction is a form of literature.
+Fiction tells imaginary stories.
+
+# Science
+Science is the study of the natural world.
+Science uses observation.
+Science uses experimentation.
+Physics is a branch of science.
+Physics studies matter and energy.
+Chemistry is a branch of science.
+Chemistry studies substances.
+Biology is a branch of science.
+Biology studies living organisms.
+Astronomy is a branch of science.
+Astronomy studies celestial objects.
+Geology is a branch of science.
+Geology studies the Earth.
+Psychology is a branch of science.
+Psychology studies the mind.
+A scientist is a person who does science.
+A hypothesis is a proposed explanation.
+A theory is a well-tested explanation.
+An experiment is a test of a hypothesis.
+Data is information collected in experiments.
+
+# Mathematics
+Mathematics is the study of numbers and patterns.
+Mathematics uses logic.
+Mathematics has rules.
+Arithmetic is a branch of mathematics.
+Arithmetic involves addition, subtraction, multiplication, and division.
+Algebra is a branch of mathematics.
+Algebra uses variables.
+Geometry is a branch of mathematics.
+Geometry studies shapes.
+Calculus is a branch of mathematics.
+Calculus studies change.
+Statistics is a branch of mathematics.
+Statistics analyzes data.
+A number is a mathematical concept.
+A number can be counted.
+An equation is a mathematical statement.
+An equation shows equality.
+A formula is a mathematical rule.
+A graph is a visual representation of data.
+
+# Professions
+A profession is an occupation.
+A profession requires specialized knowledge.
+A doctor is a profession.
+A doctor treats medical conditions.
+A teacher is a profession.
+A teacher educates students.
+An engineer is a profession.
+An engineer designs and builds things.
+A lawyer is a profession.
+A lawyer practices law.
+A scientist is a profession.
+A scientist conducts research.
+An artist is a profession.
+An artist creates art.
+A writer is a profession.
+A writer creates written works.
+A chef is a profession.
+A chef prepares food.
+A police officer is a profession.
+A police officer enforces laws.
+A firefighter is a profession.
+A firefighter fights fires.
+
+# Buildings
+A building is a structure.
+A building provides shelter.
+A house is a building.
+A house is a dwelling for people.
+An apartment is a dwelling within a larger building.
+A school is a building.
+A school is for education.
+A hospital is a building.
+A hospital is for medical care.
+A store is a building.
+A store is for selling goods.
+A restaurant is a building.
+A restaurant is for serving food.
+An office is a building.
+An office is for work.
+A factory is a building.
+A factory is for manufacturing.
+A museum is a building.
+A museum displays artifacts.
+A library is a building.
+A library contains books.
+A church is a building.
+A church is for religious worship.
+
+# Clothing
+Clothing is worn by people.
+Clothing provides protection.
+Clothing can be fashionable.
+A shirt is clothing.
+A shirt covers the upper body.
+Pants are clothing.
+Pants cover the legs.
+A dress is clothing.
+A dress is often worn by women.
+A coat is clothing.
+A coat provides warmth.
+Shoes are clothing.
+Shoes protect the feet.
+A hat is clothing.
+A hat covers the head.
+Gloves are clothing.
+Gloves cover the hands.
+Socks are clothing.
+Socks cover the feet.
+A scarf is clothing.
+A scarf covers the neck.
+A belt is clothing.
+A belt holds pants up.
+
+# Family
+A family is a group of related people.
+A family can live together.
+A parent is a family member.
+A parent raises children.
+A mother is a female parent.
+A father is a male parent.
+A child is a young person.
+A child is raised by parents.
+A sibling is a family member.
+A sibling shares parents with another person.
+A brother is a male sibling.
+A sister is a female sibling.
+A grandparent is a parent's parent.
+A grandmother is a female grandparent.
+A grandfather is a male grandparent.
+An aunt is a parent's sister.
+An uncle is a parent's brother.
+A cousin is an aunt or uncle's child.
+
+# Materials
+A material is a substance.
+A material can be used to make things.
+Wood is a material.
+Wood comes from trees.
+Metal is a material.
+Metal is strong.
+Metal can conduct electricity.
+Plastic is a material.
+Plastic is synthetic.
+Plastic is flexible.
+Glass is a material.
+Glass is transparent.
+Glass is fragile.
+Fabric is a material.
+Fabric is used for clothing.
+Paper is a material.
+Paper is made from wood pulp.
+Paper is used for writing.
+Rubber is a material.
+Rubber is elastic.
+Leather is a material.
+Leather comes from animal skin.
+
+# Tools
+A tool is an object.
+A tool is used to perform tasks.
+A hammer is a tool.
+A hammer is used for pounding.
+A screwdriver is a tool.
+A screwdriver is used for turning screws.
+A saw is a tool.
+A saw is used for cutting.
+A drill is a tool.
+A drill is used for making holes.
+A wrench is a tool.
+A wrench is used for turning nuts and bolts.
+Pliers are a tool.
+Pliers are used for gripping.
+Scissors are a tool.
+Scissors are used for cutting.
+A knife is a tool.
+A knife is used for cutting.
+A measuring tape is a tool.
+A measuring tape is used for measuring length.
+
+# Furniture
+Furniture is objects in a home or building.
+Furniture is used by people.
+A chair is furniture.
+A chair is for sitting.
+A table is furniture.
+A table has a flat surface.
+A bed is furniture.
+A bed is for sleeping.
+A sofa is furniture.
+A sofa is for sitting.
+A desk is furniture.
+A desk is for working.
+A bookshelf is furniture.
+A bookshelf holds books.
+A cabinet is furniture.
+A cabinet stores items.
+A dresser is furniture.
+A dresser stores clothes.
+A mirror is furniture.
+A mirror reflects images.
+A lamp is furniture.
+A lamp provides light.
+
+# Containers
+A container is an object.
+A container can hold things.
+A box is a container.
+A box has six sides.
+A bag is a container.
+A bag is flexible.
+A bottle is a container.
+A bottle holds liquids.
+A can is a container.
+A can is made of metal.
+A jar is a container.
+A jar has a lid.
+A basket is a container.
+A basket is woven.
+A bowl is a container.
+A bowl is open at the top.
+A cup is a container.
+A cup holds drinks.
+A pot is a container.
+A pot is used for cooking.
+A pan is a container.
+A pan is used for cooking.
+
+# Vehicles
+A vehicle is a means of transportation.
+A vehicle can move.
+A car is a vehicle.
+A car has four wheels.
+A car has an engine.
+A bicycle is a vehicle.
+A bicycle has two wheels.
+A bicycle is powered by pedaling.
+A motorcycle is a vehicle.
+A motorcycle has two wheels.
+A motorcycle has an engine.
+A bus is a vehicle.
+A bus can carry many people.
+A train is a vehicle.
+A train runs on tracks.
+A plane is a vehicle.
+A plane can fly.
+A plane has wings.
+A boat is a vehicle.
+A boat floats on water.
+A ship is a large boat.
+A helicopter is a vehicle.
+A helicopter has rotors.
+A helicopter can hover.
+
+# Electronics
+Electronics are devices that use electricity.
+Electronics can process information.
+A computer is an electronic device.
+A computer processes data.
+A smartphone is an electronic device.
+A smartphone is a portable computer.
+A television is an electronic device.
+A television displays images.
+A radio is an electronic device.
+A radio receives audio signals.
+A camera is an electronic device.
+A camera captures images.
+A microphone is an electronic device.
+A microphone captures sound.
+A speaker is an electronic device.
+A speaker produces sound.
+A printer is an electronic device.
+A printer creates physical copies.
+A keyboard is an electronic device.
+A keyboard inputs text.
+A mouse is an electronic device.
+A mouse controls a cursor.
+
+# Appliances
+An appliance is a device for household tasks.
+An appliance uses electricity.
+A refrigerator is an appliance.
+A refrigerator keeps food cold.
+A stove is an appliance.
+A stove is used for cooking.
+An oven is an appliance.
+An oven is used for baking.
+A microwave is an appliance.
+A microwave heats food quickly.
+A dishwasher is an appliance.
+A dishwasher cleans dishes.
+A washing machine is an appliance.
+A washing machine cleans clothes.
+A dryer is an appliance.
+A dryer dries clothes.
+A vacuum cleaner is an appliance.
+A vacuum cleaner cleans floors.
+A toaster is an appliance.
+A toaster toasts bread.
+A blender is an appliance.
+A blender mixes food.
+
+# Celestial Objects
+A celestial object is in space.
+A celestial object can be observed from Earth.
+A star is a celestial object.
+A star produces light and heat.
+The Sun is a star.
+The Sun is the center of our solar system.
+A planet is a celestial object.
+A planet orbits a star.
+Earth is a planet.
+Earth is where humans live.
+Mars is a planet.
+Mars is red.
+Jupiter is a planet.
+Jupiter is the largest planet in our solar system.
+A moon is a celestial object.
+A moon orbits a planet.
+The Moon is Earth's moon.
+A comet is a celestial object.
+A comet has a tail.
+An asteroid is a celestial object.
+An asteroid is a small rocky body.
+A galaxy is a celestial object.
+A galaxy contains many stars.
+The Milky Way is a galaxy.
+The Milky Way is our galaxy.
+
+# Natural Disasters
+A natural disaster is an event.
+A natural disaster can cause damage.
+An earthquake is a natural disaster.
+An earthquake shakes the ground.
+A hurricane is a natural disaster.
+A hurricane has strong winds.
+A hurricane has heavy rain.
+A tornado is a natural disaster.
+A tornado is a rotating column of air.
+A flood is a natural disaster.
+A flood is an overflow of water.
+A drought is a natural disaster.
+A drought is a long period without rain.
+A wildfire is a natural disaster.
+A wildfire is an uncontrolled fire.
+A tsunami is a natural disaster.
+A tsunami is a large ocean wave.
+A volcanic eruption is a natural disaster.
+A volcanic eruption expels lava.
+A landslide is a natural disaster.
+A landslide is falling rocks and earth.
+A blizzard is a natural disaster.
+A blizzard is a severe snowstorm.
+
+# Seasons
+A season is a division of the year.
+A season has characteristic weather.
+Spring is a season.
+Spring comes after winter.
+Spring is when plants begin to grow.
+Summer is a season.
+Summer comes after spring.
+Summer is hot.
+Autumn is a season.
+Autumn is also called fall.
+Autumn comes after summer.
+Autumn is when leaves change color.
+Winter is a season.
+Winter comes after autumn.
+Winter is cold.
+Winter often has snow.
+
+# Directions
+A direction is a way to go.
+A direction can be followed.
+North is a direction.
+North is toward the North Pole.
+South is a direction.
+South is toward the South Pole.
+East is a direction.
+East is where the sun rises.
+West is a direction.
+West is where the sun sets.
+Up is a direction.
+Up is away from the ground.
+Down is a direction.
+Down is toward the ground.
+Left is a direction.
+Left is toward the left hand.
+Right is a direction.
+Right is toward the right hand.
+Forward is a direction.
+Forward is ahead.
+Backward is a direction.
+Backward is behind.
+
+# Numbers
+A number is a mathematical concept.
+A number can be counted.
+Zero is a number.
+Zero represents nothing.
+One is a number.
+One is the first counting number.
+Two is a number.
+Two comes after one.
+Three is a number.
+Three comes after two.
+Four is a number.
+Four comes after three.
+Five is a number.
+Five comes after four.
+Ten is a number.
+Ten is after nine.
+Hundred is a number.
+Hundred is 10 times 10.
+Thousand is a number.
+Thousand is 10 times 100.
+Million is a number.
+Million is 1000 times 1000.
+Billion is a number.
+Billion is 1000 times million.
+
+# Languages
+A language is a system of communication.
+A language has words.
+A language has grammar.
+English is a language.
+English is spoken in many countries.
+Spanish is a language.
+Spanish is spoken in Spain and Latin America.
+French is a language.
+French is spoken in France.
+German is a language.
+German is spoken in Germany.
+Chinese is a language.
+Chinese is spoken in China.
+Japanese is a language.
+Japanese is spoken in Japan.
+Arabic is a language.
+Arabic is spoken in the Middle East.
+Russian is a language.
+Russian is spoken in Russia.
+Hindi is a language.
+Hindi is spoken in India.
+Portuguese is a language.
+Portuguese is spoken in Portugal and Brazil.
+
+# Countries
+A country is a political entity.
+A country has borders.
+A country has a government.
+The United States is a country.
+The United States is in North America.
+Canada is a country.
+Canada is north of the United States.
+Mexico is a country.
+Mexico is south of the United States.
+Brazil is a country.
+Brazil is in South America.
+France is a country.
+France is in Europe.
+Germany is a country.
+Germany is in Europe.
+China is a country.
+China is in Asia.
+Japan is a country.
+Japan is an island nation.
+Australia is a country.
+Australia is also a continent.
+Egypt is a country.
+Egypt is in Africa.
+Russia is a country.
+Russia is the largest country by area.
+
+# Occupations
+An occupation is a job.
+An occupation provides income.
+A doctor is an occupation.
+A doctor treats medical conditions.
+A teacher is an occupation.
+A teacher educates students.
+An engineer is an occupation.
+An engineer designs and builds things.
+A lawyer is an occupation.
+A lawyer practices law.
+A chef is an occupation.
+A chef prepares food.
+A police officer is an occupation.
+A police officer enforces laws.
+A firefighter is an occupation.
+A firefighter fights fires.
+A farmer is an occupation.
+A farmer grows crops.
+A writer is an occupation.
+A writer creates written works.
+An artist is an occupation.
+An artist creates art.
+A musician is an occupation.
+A musician plays music.
+
+# Holidays
+A holiday is a special day.
+A holiday is often celebrated.
+Christmas is a holiday.
+Christmas is on December 25.
+Easter is a holiday.
+Easter celebrates the resurrection of Jesus.
+Halloween is a holiday.
+Halloween is on October 31.
+Thanksgiving is a holiday.
+Thanksgiving is a time for giving thanks.
+New Year's Day is a holiday.
+New Year's Day is on January 1.
+Independence Day is a holiday.
+Independence Day celebrates a country's independence.
+Valentine's Day is a holiday.
+Valentine's Day celebrates love.
+St. Patrick's Day is a holiday.
+St. Patrick's Day is on March 17.
+Mother's Day is a holiday.
+Mother's Day honors mothers.
+Father's Day is a holiday.
+Father's Day honors fathers.
+
+# Sports Equipment
+Sports equipment is used in sports.
+Sports equipment helps performance.
+A ball is sports equipment.
+A ball is round.
+A bat is sports equipment.
+A bat is used to hit balls.
+A racket is sports equipment.
+A racket is used in tennis.
+A club is sports equipment.
+A club is used in golf.
+A helmet is sports equipment.
+A helmet protects the head.
+A glove is sports equipment.
+A glove protects the hand.
+A net is sports equipment.
+A net is used in many sports.
+A goal is sports equipment.
+A goal is where points are scored.
+A hoop is sports equipment.
+A hoop is used in basketball.
+Skis are sports equipment.
+Skis are used on snow.
+A skateboard is sports equipment.
+A skateboard has wheels.
+
+# Musical Instruments
+A musical instrument makes music.
+A musical instrument is played by a musician.
+A piano is a musical instrument.
+A piano has keys.
+A guitar is a musical instrument.
+A guitar has strings.
+A drum is a musical instrument.
+A drum is hit to make sound.
+A violin is a musical instrument.
+A violin is played with a bow.
+A flute is a musical instrument.
+A flute is blown into.
+A trumpet is a musical instrument.
+A trumpet is a brass instrument.
+A saxophone is a musical instrument.
+A saxophone is a woodwind instrument.
+A harp is a musical instrument.
+A harp has many strings.
+An accordion is a musical instrument.
+An accordion is squeezed to make sound.
+A xylophone is a musical instrument.
+A xylophone has wooden bars.
+
+# Kitchen Utensils
+A kitchen utensil is used for cooking.
+A kitchen utensil is found in kitchens.
+A knife is a kitchen utensil.
+A knife is used for cutting.
+A fork is a kitchen utensil.
+A fork is used for eating.
+A spoon is a kitchen utensil.
+A spoon is used for eating liquids.
+A spatula is a kitchen utensil.
+A spatula is used for flipping food.
+A whisk is a kitchen utensil.
+A whisk is used for mixing.
+A ladle is a kitchen utensil.
+A ladle is used for serving soup.
+A grater is a kitchen utensil.
+A grater is used for shredding food.
+A peeler is a kitchen utensil.
+A peeler is used for removing skin from vegetables.
+A can opener is a kitchen utensil.
+A can opener is used for opening cans.
+A measuring cup is a kitchen utensil.
+A measuring cup is used for measuring liquids.
+
+# Beverages
+A beverage is a drink.
+A beverage can be consumed.
+Water is a beverage.
+Water is essential for life.
+Milk is a beverage.
+Milk comes from animals.
+Juice is a beverage.
+Juice comes from fruits or vegetables.
+Tea is a beverage.
+Tea is made from leaves.
+Coffee is a beverage.
+Coffee is made from beans.
+Soda is a beverage.
+Soda is carbonated.
+Wine is a beverage.
+Wine is made from grapes.
+Wine contains alcohol.
+Beer is a beverage.
+Beer is made from grains.
+Beer contains alcohol.
+Hot chocolate is a beverage.
+Hot chocolate is made from cocoa.
+Lemonade is a beverage.
+Lemonade is made from lemons.
+
+# Fruits
+A fruit is a plant part.
+A fruit contains seeds.
+A fruit is often sweet.
+An apple is a fruit.
+An apple grows on trees.
+A banana is a fruit.
+A banana is yellow.
+An orange is a fruit.
+An orange is citrus.
+A grape is a fruit.
+Grapes grow in clusters.
+A strawberry is a fruit.
+A strawberry is red.
+A blueberry is a fruit.
+A blueberry is small.
+A watermelon is a fruit.
+A watermelon is large.
+A pineapple is a fruit.
+A pineapple has a spiky exterior.
+A peach is a fruit.
+A peach has fuzzy skin.
+A mango is a fruit.
+A mango is tropical.
+A cherry is a fruit.
+A cherry has a pit.
+
+# Vegetables
+A vegetable is a plant part.
+A vegetable is used as food.
+A carrot is a vegetable.
+A carrot grows underground.
+A potato is a vegetable.
+A potato is a tuber.
+A tomato is a vegetable.
+A tomato is red.
+A cucumber is a vegetable.
+A cucumber is long and green.
+A lettuce is a vegetable.
+Lettuce has leaves.
+A broccoli is a vegetable.
+Broccoli has florets.
+A spinach is a vegetable.
+Spinach has dark green leaves.
+An onion is a vegetable.
+An onion has layers.
+A garlic is a vegetable.
+Garlic has cloves.
+A bell pepper is a vegetable.
+A bell pepper is hollow.
+A corn is a vegetable.
+Corn grows on a cob.
+
+# Desserts
+A dessert is a sweet food.
+A dessert is often eaten after a meal.
+A cake is a dessert.
+A cake is baked.
+A pie is a dessert.
+A pie has a crust.
+Ice cream is a dessert.
+Ice cream is frozen.
+A cookie is a dessert.
+A cookie is small and flat.
+A brownie is a dessert.
+A brownie is chocolate.
+A pudding is a dessert.
+A pudding is soft.
+A cupcake is a dessert.
+A cupcake is a small cake.
+A donut is a dessert.
+A donut has a hole.
+A cheesecake is a dessert.
+A cheesecake has a cheese filling.
+A tart is a dessert.
+A tart has a fruit filling.
+A pastry is a dessert.
+A pastry has a flaky crust.
+
+# Insects
+An insect is a small animal.
+An insect has six legs.
+An insect has a body divided into three parts.
+A bee is an insect.
+A bee makes honey.
+A bee can sting.
+An ant is an insect.
+An ant lives in colonies.
+A butterfly is an insect.
+A butterfly has colorful wings.
+A moth is an insect.
+A moth is similar to a butterfly.
+A fly is an insect.
+A fly can fly.
+A mosquito is an insect.
+A mosquito drinks blood.
+A beetle is an insect.
+A beetle has hard wings.
+A grasshopper is an insect.
+A grasshopper can jump.
+A cricket is an insect.
+A cricket makes chirping sounds.

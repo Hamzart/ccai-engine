@@ -1,0 +1,24 @@
+{
+  "user_id": "user_hzls70ov",
+  "name": "user_hzls70ov",
+  "created_at": 1753322249.928137,
+  "last_active": 1753322264.047275,
+  "session_count": 2,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 2,
+    "questions_asked": 1,
+    "commands_issued": 0,
+    "statements_made": 1,
+    "average_sentiment": 0.5
+  },
+  "topic_interests": {},
+  "frequent_entities": {},
+  "feedback_history": []
+}

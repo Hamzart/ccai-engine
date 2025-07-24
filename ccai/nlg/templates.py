@@ -69,16 +69,16 @@ class TemplateEngine:
             
             # Templates for learning acknowledgments
             "learning": [
-                "I've learned that $fact.",
-                "Thank you for telling me that $fact.",
-                "I've added to my knowledge that $fact."
+                "I've learned that $fact. Thank you for teaching me.",
+                "Thank you for telling me that $fact. I've added this to my knowledge.",
+                "I've added to my knowledge that $fact. This helps me learn."
             ],
             
             # Templates for unknown concepts
             "unknown_concept": [
-                "I don't have any information about $entity.",
-                "I'm not familiar with $entity.",
-                "$entity is not in my knowledge base."
+                "I don't have any information about $entity in my knowledge base.",
+                "I'm not familiar with $entity based on my current knowledge.",
+                "$entity is not in my knowledge base yet."
             ],
             
             # Templates for uncertain responses
@@ -92,7 +92,7 @@ class TemplateEngine:
             "fallback": [
                 "I don't know how to answer that question.",
                 "I don't have enough information to provide an answer.",
-                "I'm still learning and don't know the answer to that yet."
+                "I'm still learning and don't know the answer to that yet according to my knowledge base."
             ]
         }
     

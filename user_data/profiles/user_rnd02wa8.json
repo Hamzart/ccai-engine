@@ -1,0 +1,29 @@
+{
+  "user_id": "user_rnd02wa8",
+  "name": "user_rnd02wa8",
+  "created_at": 1753320416.2747378,
+  "last_active": 1753320471.2240472,
+  "session_count": 3,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 3,
+    "questions_asked": 1,
+    "commands_issued": 0,
+    "statements_made": 2,
+    "average_sentiment": 0.3333333333333333
+  },
+  "topic_interests": {
+    "entertainment": 0.1,
+    "food": 0.1
+  },
+  "frequent_entities": {
+    "dog": 2
+  },
+  "feedback_history": []
+}

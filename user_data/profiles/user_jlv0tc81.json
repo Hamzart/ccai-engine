@@ -1,0 +1,24 @@
+{
+  "user_id": "user_jlv0tc81",
+  "name": "user_jlv0tc81",
+  "created_at": 1753321497.356977,
+  "last_active": 1753321497.356978,
+  "session_count": 0,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 0,
+    "questions_asked": 0,
+    "commands_issued": 0,
+    "statements_made": 0,
+    "average_sentiment": 0.0
+  },
+  "topic_interests": {},
+  "frequent_entities": {},
+  "feedback_history": []
+}

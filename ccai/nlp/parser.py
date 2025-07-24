@@ -21,6 +21,12 @@ class QueryParser:
         """
         cleaned = text.lower().strip()
         cleaned = cleaned.replace("what's", "what is").replace("whats", "what is")
+        cleaned = cleaned.replace("who's", "who is").replace("whos", "who is")
+        cleaned = cleaned.replace("where's", "where is").replace("wheres", "where is")
+        cleaned = cleaned.replace("when's", "when is").replace("whens", "when is")
+        cleaned = cleaned.replace("how's", "how is").replace("hows", "how is")
+        cleaned = cleaned.replace("why's", "why is").replace("whys", "why is")
+        
         doc = self.nlp(cleaned.rstrip('?'))
         
         try:
@@ -44,20 +50,21 @@ class QueryParser:
             return temporal_signal
 
         # 0. Definition-style questions
-        if sent.root.lemma_ in {"define", "describe", "explain"}:
+        if sent.root.lemma_ in {"define", "describe", "explain", "tell"}:
             obj = self._find_object(sent, sent.root, deps=("dobj", "attr", "pobj"))
             if obj:
                 return Signal(origin=obj.text, purpose="QUERY", payload={"ask": "relation.is_a"})
 
         # 1. Check for Verification Intent (is, does, can)
         # This rule is now more specific: it only triggers if the sentence STARTS with an auxiliary verb.
-        if sent[0].pos_ == "AUX":
+        if sent[0].pos_ == "AUX" or (len(sent) > 1 and sent[1].pos_ == "AUX"):
+            aux_index = 0 if sent[0].pos_ == "AUX" else 1
             subject = self._find_subject(sent)
             root = sent.root
 
             if subject:
                 # "is/are" questions
-                if sent[0].lemma_ == 'be':
+                if sent[aux_index].lemma_ == 'be':
                     adj_obj = self._find_object(sent, root, deps=("acomp",))
                     if adj_obj:
                         return Signal(origin=subject.text, purpose='VERIFY', payload={'relation': 'has_property', 'target': adj_obj.text})
@@ -67,7 +74,7 @@ class QueryParser:
                         return Signal(origin=subject.text, purpose='VERIFY', payload={'relation': 'is_a', 'target': noun_obj.text})
 
                 # "does/do" questions
-                if sent[0].lemma_ == 'do':
+                if sent[aux_index].lemma_ == 'do':
                     obj = self._find_object(sent, root, deps=("dobj",))
                     if root.lemma_ == 'have' and obj:
                         return Signal(origin=subject.text, purpose='VERIFY', payload={'relation': 'has_part', 'target': obj.text})
@@ -75,7 +82,7 @@ class QueryParser:
                         return Signal(origin=subject.text, purpose='VERIFY', payload={'relation': 'can_do', 'target': root.lemma_})
 
                 # "can" questions
-                if sent[0].lemma_ == 'can':
+                if sent[aux_index].lemma_ == 'can':
                     return Signal(origin=subject.text, purpose='VERIFY', payload={'relation': 'can_do', 'target': root.lemma_})
         
         # 2. Check for "What" Query Intent
@@ -86,17 +93,23 @@ class QueryParser:
                 entity = is_a_match.group(1).strip()
                 return Signal(origin=entity, purpose="QUERY", payload={"ask": "relation.is_a"})
             
+            # Handle "what is X?" questions
+            is_match = re.search(r'what\s+is\s+([a-z_]+)', sent.text.lower())
+            if is_match:
+                entity = is_match.group(1).strip()
+                return Signal(origin=entity, purpose="QUERY", payload={"ask": "relation.is_a"})
+            
             subject = self._find_subject(sent)
             if not subject: subject = sent.root
 
             if "is" in [t.text for t in sent] or "are" in [t.text for t in sent]:
                 return Signal(origin=subject.text, purpose="QUERY", payload={"ask": "relation.is_a"})
-            if "have" in [t.lemma_ for t in sent] or "properties" in sent.text:
+            if "have" in [t.lemma_ for t in sent] or "has" in [t.lemma_ for t in sent] or "properties" in sent.text or "parts" in sent.text:
                 return Signal(origin=subject.text, purpose="QUERY", payload={"ask_relation": "has_part"})
             # Handles "what does X do?"
             if ("can" in [t.text for t in sent] or "does" in [t.text for t in sent]) and "do" in [t.lemma_ for t in sent]:
                 return Signal(origin=subject.text, purpose="QUERY", payload={"ask_relation": "can_do"})
-            if "used for" in sent.text:
+            if "used for" in sent.text or "purpose" in sent.text or "function" in sent.text:
                 return Signal(origin=subject.text, purpose="QUERY", payload={"ask_relation": "used_for"})
 
         return None

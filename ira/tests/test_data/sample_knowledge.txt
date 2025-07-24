@@ -1,0 +1,43 @@
+# Sample Knowledge File for IRA System
+
+This file contains sample knowledge for testing the FileKnowledgeLoader component of the IRA system.
+
+## Animals
+
+The lion is a large cat of the genus Panthera native to Africa and India.
+Lions have muscular, deep-chested bodies, short, rounded heads, round ears, and a hairy tuft at the end of their tails.
+Lions are apex predators and are known as the "king of beasts" or "king of the jungle".
+
+The tiger is the largest living cat species and a member of the genus Panthera.
+Tigers are most recognizable for their dark vertical stripes on orange-brown fur with a lighter underside.
+Tigers are apex predators, primarily preying on ungulates such as deer and wild boar.
+
+## Technology
+
+A computer is an electronic device that manipulates information, or data.
+Computers have the ability to store, retrieve, and process data.
+Modern computers can perform a wide range of activities, such as browsing the internet, playing games, and creating documents.
+
+Artificial intelligence (AI) is intelligence demonstrated by machines.
+AI systems can perform tasks that typically require human intelligence, such as visual perception, speech recognition, and decision-making.
+Machine learning is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed.
+
+## Science
+
+Physics is the natural science that studies matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force.
+Physics is one of the most fundamental scientific disciplines, with its main goal being to understand how the universe behaves.
+The laws of physics are expressed as mathematical equations.
+
+Chemistry is the scientific study of the properties and behavior of matter.
+Chemistry is concerned with the atoms and their interactions with other atoms, and in particular with the properties of chemical bonds.
+Chemistry is sometimes called "the central science" because it connects physics with other natural sciences such as geology and biology.
+
+## History
+
+Ancient Rome was a civilization that grew from a small agricultural community founded on the Italian Peninsula circa the 9th century BC to a massive empire straddling the Mediterranean Sea.
+The Roman Empire was one of the largest empires in world history, with an estimated 50 to 90 million inhabitants.
+Roman civilization has contributed greatly to the development of law, war, art, literature, architecture, technology, religion, and language in the Western world.
+
+The Renaissance was a period in European history marking the transition from the Middle Ages to modernity.
+The Renaissance began in Italy in the 14th century and spread to the rest of Europe by the 16th and 17th centuries.
+The Renaissance is characterized by a focus on learning and scientific inquiry, a flowering of the arts, and the beginning of modern political thought.

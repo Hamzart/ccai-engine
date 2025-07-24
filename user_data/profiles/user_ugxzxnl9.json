@@ -1,0 +1,26 @@
+{
+  "user_id": "user_ugxzxnl9",
+  "name": "user_ugxzxnl9",
+  "created_at": 1753320374.059137,
+  "last_active": 1753320398.2492878,
+  "session_count": 4,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 4,
+    "questions_asked": 2,
+    "commands_issued": 0,
+    "statements_made": 2,
+    "average_sentiment": 0.75
+  },
+  "topic_interests": {
+    "technology": 0.1
+  },
+  "frequent_entities": {},
+  "feedback_history": []
+}

@@ -1,0 +1,24 @@
+{
+  "user_id": "user_y38d6akx",
+  "name": "user_y38d6akx",
+  "created_at": 1753324309.7113228,
+  "last_active": 1753324309.7113228,
+  "session_count": 0,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 0,
+    "questions_asked": 0,
+    "commands_issued": 0,
+    "statements_made": 0,
+    "average_sentiment": 0.0
+  },
+  "topic_interests": {},
+  "frequent_entities": {},
+  "feedback_history": []
+}

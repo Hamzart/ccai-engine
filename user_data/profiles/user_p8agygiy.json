@@ -1,0 +1,26 @@
+{
+  "user_id": "user_p8agygiy",
+  "name": "user_p8agygiy",
+  "created_at": 1753321498.511874,
+  "last_active": 1753321629.559723,
+  "session_count": 10,
+  "preferences": {
+    "response_style": "balanced",
+    "formality_level": "neutral",
+    "technical_level": "medium",
+    "humor_level": "medium",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 10,
+    "questions_asked": 8,
+    "commands_issued": 0,
+    "statements_made": 2,
+    "average_sentiment": 0.6
+  },
+  "topic_interests": {
+    "education": 0.1
+  },
+  "frequent_entities": {},
+  "feedback_history": []
+}

@@ -1,0 +1,196 @@
+{
+  "uncertainty_handler": {
+    "confidence_threshold": 0.7,
+    "conflict_threshold": 0.3
+  },
+  "semantic_similarity": {
+    "embedding_dimension": 256
+  },
+  "self_organizing_structure": {
+    "reorganization_threshold": 0.5,
+    "max_cluster_size": 100,
+    "min_cluster_size": 5,
+    "stability_factor": 0.8,
+    "clusters": [
+      [
+        "847c671b-01a5-49e5-acd1-e129ca042767"
+      ],
+      [
+        "689a85cf-122e-42fd-a38b-e75b6025c393"
+      ],
+      [
+        "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3"
+      ]
+    ],
+    "concept_to_cluster": {
+      "847c671b-01a5-49e5-acd1-e129ca042767": 0,
+      "689a85cf-122e-42fd-a38b-e75b6025c393": 1,
+      "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3": 2
+    },
+    "stability_scores": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0
+    },
+    "reorganization_count": 0
+  },
+  "concepts": {
+    "847c671b-01a5-49e5-acd1-e129ca042767": {
+      "id": "847c671b-01a5-49e5-acd1-e129ca042767",
+      "name": "Cat",
+      "properties": {
+        "color": {
+          "value": "various",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.487400"
+        },
+        "legs": {
+          "value": "4",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.487429"
+        },
+        "sound": {
+          "value": "meow",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.487453"
+        },
+        "lifespan": {
+          "value": "15 years",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.487476"
+        }
+      },
+      "relations": {
+        "is_a": [
+          {
+            "id": "77fbdb70-b4a7-440d-9764-63520799b12a",
+            "type": "is_a",
+            "source_concept_id": "847c671b-01a5-49e5-acd1-e129ca042767",
+            "target_concept_id": "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3",
+            "confidence": 1.0,
+            "properties": {},
+            "sources": [],
+            "last_updated": "2025-07-24T09:09:24.486788",
+            "bidirectional": false
+          }
+        ]
+      },
+      "aliases": [
+        "feline",
+        "kitty"
+      ],
+      "categories": [
+        "mammal",
+        "pet"
+      ]
+    },
+    "689a85cf-122e-42fd-a38b-e75b6025c393": {
+      "id": "689a85cf-122e-42fd-a38b-e75b6025c393",
+      "name": "Dog",
+      "properties": {
+        "color": {
+          "value": "various",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.486597"
+        },
+        "legs": {
+          "value": "4",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.486598"
+        },
+        "sound": {
+          "value": "bark",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.486599"
+        }
+      },
+      "relations": {
+        "is_a": [
+          {
+            "id": "a92d7d11-028a-46de-a491-1006ed8c92f1",
+            "type": "is_a",
+            "source_concept_id": "689a85cf-122e-42fd-a38b-e75b6025c393",
+            "target_concept_id": "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3",
+            "confidence": 1.0,
+            "properties": {},
+            "sources": [],
+            "last_updated": "2025-07-24T09:09:24.486817",
+            "bidirectional": false
+          }
+        ]
+      },
+      "aliases": [
+        "canine",
+        "puppy"
+      ],
+      "categories": [
+        "mammal",
+        "pet"
+      ]
+    },
+    "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3": {
+      "id": "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3",
+      "name": "Animal",
+      "properties": {
+        "alive": {
+          "value": "yes",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.486679"
+        },
+        "kingdom": {
+          "value": "Animalia",
+          "confidence": 1.0,
+          "sources": [],
+          "last_updated": "2025-07-24T09:09:24.486680"
+        }
+      },
+      "relations": {},
+      "aliases": [],
+      "categories": [
+        "living_thing"
+      ]
+    }
+  },
+  "concept_name_to_id": {
+    "cat": "847c671b-01a5-49e5-acd1-e129ca042767",
+    "dog": "689a85cf-122e-42fd-a38b-e75b6025c393",
+    "animal": "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3"
+  },
+  "alias_to_id": {
+    "feline": "847c671b-01a5-49e5-acd1-e129ca042767",
+    "kitty": "847c671b-01a5-49e5-acd1-e129ca042767",
+    "canine": "689a85cf-122e-42fd-a38b-e75b6025c393",
+    "puppy": "689a85cf-122e-42fd-a38b-e75b6025c393"
+  },
+  "category_to_ids": {
+    "mammal": [
+      "689a85cf-122e-42fd-a38b-e75b6025c393",
+      "847c671b-01a5-49e5-acd1-e129ca042767"
+    ],
+    "pet": [
+      "689a85cf-122e-42fd-a38b-e75b6025c393",
+      "847c671b-01a5-49e5-acd1-e129ca042767"
+    ],
+    "living_thing": [
+      "1af1fd65-57f3-4e62-aa4b-3f15e3ea2cf3"
+    ]
+  },
+  "relation_type_to_ids": {
+    "is_a": [
+      "a92d7d11-028a-46de-a491-1006ed8c92f1",
+      "77fbdb70-b4a7-440d-9764-63520799b12a"
+    ]
+  },
+  "relation_ids": [
+    "a92d7d11-028a-46de-a491-1006ed8c92f1",
+    "77fbdb70-b4a7-440d-9764-63520799b12a"
+  ]
+}

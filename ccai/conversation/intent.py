@@ -95,6 +95,11 @@ class IntentClassifier:
                 if keyword.lower() in text_lower:
                     return intent_type
         
+        # Check if the text is a statement that can be learned from
+        # Look for patterns like "X is Y" or "X can Y"
+        if re.search(r'\b(is|are|can|has|have)\b', text.lower()) and len(text.split()) > 3:
+            return IntentType.STATEMENT
+            
         # If the text contains a verb and appears to be a statement
         # This is a simple heuristic and could be improved with proper NLP parsing
         words = text.split()
