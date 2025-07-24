@@ -27,8 +27,10 @@ class InformationExtractor:
             self._extract_has_part(sent)
             self._extract_used_for(sent)
             self._extract_can_do(sent)
+            self._extract_agent_action_object(sent)
             self._extract_adjective_property(sent)
             self._extract_alias(sent)
+            self._extract_compound_statement(sent)
         print("✅ Text ingestion complete.")
 
     def _get_or_create_node(self, name: str, ctype: str = "entity") -> ConceptNode:
@@ -155,3 +157,80 @@ class InformationExtractor:
                     alias = obj.text.lower().strip()
                     if alias not in node.aliases:
                         node.aliases.append(alias)
+                        
+    def _extract_agent_action_object(self, sent: Doc):
+        """
+        Extracts 'X does Y to Z' (agent-action-object) relationships.
+        This captures active voice sentences where an agent performs an action on an object.
+        """
+        for token in sent:
+            # Look for verbs that are the root of the sentence or a main verb
+            if token.pos_ == "VERB" and token.dep_ in ("ROOT", "ccomp", "xcomp"):
+                # Find the subject (agent)
+                agent = next((c for c in token.children if c.dep_ in ("nsubj", "nsubj:pass")), None)
+                
+                # Find the direct object
+                obj = next((c for c in token.children if c.dep_ == "dobj"), None)
+                
+                # If we have both agent and object, create the relationship
+                if agent and obj:
+                    action = token.lemma_
+                    print(f"  -> Found AGENT-ACTION-OBJECT: '{agent.text}' {action} '{obj.text}'")
+                    
+                    # Create or get nodes
+                    agent_node = self._get_or_create_node(agent.text, ctype="agent")
+                    action_node = self._get_or_create_node(action, ctype="event")
+                    obj_node = self._get_or_create_node(obj.text)
+                    
+                    # Add relationships
+                    self.graph.add_edge(agent_node.name, "performs", action_node.name)
+                    self.graph.add_edge(action_node.name, "affects", obj_node.name)
+                    
+    def _extract_compound_statement(self, sent: Doc):
+        """
+        Extracts compound statements like 'a human is an agent that can talk and walk and learn'.
+        This handles more complex statements that combine multiple relationships.
+        """
+        # Check if this is a definition statement with a relative clause
+        for token in sent:
+            if token.dep_ == "ROOT" and token.lemma_ == "be":
+                subject = next((c for c in token.children if c.dep_ in ("nsubj", "nsubjpass")), None)
+                attribute = next((c for c in token.children if c.dep_ == "attr"), None)
+                
+                if subject and attribute:
+                    # First, extract the basic is-a relationship
+                    print(f"  -> Found IS-A in compound: '{subject.text}' is a '{attribute.text}'")
+                    subj_node = self._get_or_create_node(subject.text)
+                    attr_node = self._get_or_create_node(attribute.text)
+                    self.graph.add_edge(subj_node.name, "is_a", attr_node.name)
+                    
+                    # Look for a relative clause (that can...)
+                    rel_clause = None
+                    for child in attribute.children:
+                        if child.dep_ == "relcl":
+                            rel_clause = child
+                            break
+                    
+                    if rel_clause:
+                        # Extract capabilities from the relative clause
+                        capabilities = []
+                        
+                        # First, check if the relative clause has "can"
+                        modal = None
+                        for child in rel_clause.children:
+                            if child.dep_ == "aux" and child.lemma_ == "can":
+                                modal = child
+                                capabilities.append(rel_clause.lemma_)
+                                break
+                        
+                        # If we found "can", look for coordinated verbs (and walk and learn)
+                        if modal:
+                            for token in sent:
+                                if token.head == rel_clause and token.dep_ == "conj":
+                                    capabilities.append(token.lemma_)
+                            
+                            # Add all capabilities to the subject
+                            for capability in capabilities:
+                                print(f"  -> Found CAN-DO in compound: '{subject.text}' can '{capability}'")
+                                action_node = self._get_or_create_node(capability, ctype="event")
+                                self.graph.add_edge(subj_node.name, "can_do", action_node.name)

@@ -1,0 +1,28 @@
+{
+  "user_id": "user_qhkq7yn0",
+  "name": "user_qhkq7yn0",
+  "created_at": 1753319405.137853,
+  "last_active": 1753319499.19486,
+  "session_count": 6,
+  "preferences": {
+    "response_style": "detailed",
+    "formality_level": "casual",
+    "technical_level": "advanced",
+    "humor_level": "high",
+    "language": "en"
+  },
+  "interaction_stats": {
+    "total_messages": 6,
+    "questions_asked": 3,
+    "commands_issued": 0,
+    "statements_made": 3,
+    "average_sentiment": 0.6666666666666666
+  },
+  "topic_interests": {
+    "education": 0.1
+  },
+  "frequent_entities": {
+    "dog": 1
+  },
+  "feedback_history": []
+}

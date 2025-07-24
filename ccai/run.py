@@ -16,6 +16,13 @@ from ccai.core.subsystems.relation import RelationResolver
 from ccai.core.subsystems.fuzzy import FuzzyMatch
 from ccai.core.subsystems.bayes import BayesianUpdater
 from ccai.core.subsystems.conflict import ConflictResolver
+from ccai.core.subsystems.analogical import AnalogicalReasoner
+from ccai.core.subsystems.temporal import TemporalReasoner
+from ccai.core.subsystems.hypothetical import HypotheticalReasoner
+from ccai.external.fusion import KnowledgeFusion, ExternalKnowledgeSubsystem
+from ccai.external.connector import registry
+from ccai.external.wikipedia import wikipedia_connector
+from ccai.external.websearch import websearch_connector
 
 def run_chat_session():
     """Initializes all AI components and starts the interactive chat loop."""
@@ -30,12 +37,19 @@ def run_chat_session():
     query_parser = QueryParser()
     extractor = InformationExtractor(graph, primitive_manager)
     
+    # Initialize knowledge fusion
+    fusion = KnowledgeFusion(graph)
+    
     subsystems = [
         InheritanceResolver(),
         RelationResolver(graph=graph),
         FuzzyMatch(),
         BayesianUpdater(),
         ConflictResolver(),
+        AnalogicalReasoner(graph=graph),
+        TemporalReasoner(),
+        HypotheticalReasoner(graph=graph),
+        ExternalKnowledgeSubsystem(graph=graph, fusion=fusion),
     ]
     reasoning_core = ReasoningCore(graph, subsystems)
     
