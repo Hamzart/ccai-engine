@@ -275,14 +275,14 @@ class SentimentAnalyzer:
             "suggested_phrases": []
         }
         
-        # Adjust tone based on sentiment score
-        if score > 0.5:
+        # Adjust tone based on sentiment score and dominant emotion
+        if score > 0.7 and dominant_emotion == "joy" and intensity > 0.6:
             adjustments["tone"] = "very positive"
-        elif score > 0.2:
+        elif score > 0.3:
             adjustments["tone"] = "positive"
-        elif score < -0.5:
+        elif score < -0.7 and intensity > 0.6:
             adjustments["tone"] = "very negative"
-        elif score < -0.2:
+        elif score < -0.3:
             adjustments["tone"] = "negative"
         
         # Adjust empathy level based on emotion and intensity

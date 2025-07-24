@@ -23,6 +23,7 @@ from ccai.external.fusion import KnowledgeFusion, ExternalKnowledgeSubsystem
 from ccai.external.connector import registry
 from ccai.external.wikipedia import wikipedia_connector
 from ccai.external.websearch import websearch_connector
+from ccai.llm.interface import LLMInterface
 
 def run_chat_session():
     """Initializes all AI components and starts the interactive chat loop."""
@@ -36,6 +37,9 @@ def run_chat_session():
     primitive_manager = PrimitiveManager(primitives_file)
     query_parser = QueryParser()
     extractor = InformationExtractor(graph, primitive_manager)
+    
+    # Initialize LLM interface
+    llm_interface = LLMInterface()
     
     # Initialize knowledge fusion
     fusion = KnowledgeFusion(graph)
@@ -57,13 +61,19 @@ def run_chat_session():
     print("🧠 Loading Concept Graph from disk...")
     graph.load_from_disk()
 
-    # Seed the graph with built-in knowledge on first run
-    if not graph._nodes:
-        kb_file = Path("knowledge.txt")
-        if kb_file.exists():
-            print("📥 Seeding knowledge base from knowledge.txt ...")
-            extractor.ingest_text(kb_file.read_text())
-            graph.save_snapshot()
+    # Always load the knowledge bases
+    kb_file = Path("knowledge.txt")
+    if kb_file.exists():
+        print("📥 Loading knowledge base from knowledge.txt ...")
+        extractor.ingest_text(kb_file.read_text())
+        graph.save_snapshot()
+        
+    # Load common knowledge
+    common_kb_file = Path("common_knowledge.txt")
+    if common_kb_file.exists():
+        print("📥 Loading common knowledge base ...")
+        extractor.ingest_text(common_kb_file.read_text())
+        graph.save_snapshot()
     
     # --- 3. Start Chat Loop ---
     print("✅ AI Ready. Let's chat! (Hint: try '@forget_all' to reset memory)")
@@ -76,11 +86,6 @@ def run_chat_session():
                 break
 
             text_stripped = text.strip()
-
-            # --- Simple Greeting Handling ---
-            if text_stripped.lower() in ["hello", "hi", "hey"]:
-                print(Panel("Hello! How can I assist you today?", title="Greeting", border_style="green"))
-                continue
 
             # --- Command Handling ---
             if text_stripped.startswith("@"):
@@ -95,7 +100,9 @@ def run_chat_session():
                     learning_text = text_stripped.removeprefix("@learn").strip()
                     if learning_text:
                         print(Panel(f"🧠 Learning: \"{learning_text}\"", title="[yellow]Learning Mode[/yellow]", border_style="yellow"))
+                        # Use both the traditional extractor and the LLM interface
                         extractor.ingest_text(learning_text)
+                        llm_interface.extract_knowledge(learning_text)
                         graph.save_snapshot()
                         print(Panel("✅ Knowledge acquired and saved.", style="green"))
                 elif text_stripped.startswith("@ingest"):
@@ -103,12 +110,81 @@ def run_chat_session():
                     file_path = Path(file_path_str)
                     if file_path.exists():
                         print(Panel(f"📚 Ingesting knowledge from file: {file_path}", title="[cyan]Ingestion Mode[/cyan]", border_style="cyan"))
-                        extractor.ingest_text(file_path.read_text())
+                        file_content = file_path.read_text()
+                        extractor.ingest_text(file_content)
+                        llm_interface.extract_knowledge(file_content)
                         graph.save_snapshot()
                         print(Panel("✅ Knowledge from file acquired and saved.", style="green"))
+                elif text_stripped.startswith("@search"):
+                    search_term = text_stripped.removeprefix("@search").strip()
+                    if search_term:
+                        print(Panel(f"🔍 Searching for information about: \"{search_term}\"", title="[blue]Search Mode[/blue]", border_style="blue"))
+                        try:
+                            # Use the Wikipedia connector to get information
+                            wiki_info = wikipedia_connector.get_details(search_term)
+                            if wiki_info and "summary" in wiki_info:
+                                # Display the summary
+                                print(Panel(wiki_info["summary"], title=f"[bold blue]Wikipedia: {search_term}[/bold blue]", border_style="blue"))
+                                
+                                # Learn from the information
+                                if "summary" in wiki_info and wiki_info["summary"]:
+                                    extractor.ingest_text(wiki_info["summary"])
+                                    llm_interface.extract_knowledge(wiki_info["summary"])
+                                    graph.save_snapshot()
+                                    print(Panel("✅ Knowledge from Wikipedia acquired and saved.", style="green"))
+                            else:
+                                print(Panel(f"❌ No information found for \"{search_term}\" on Wikipedia.", title="[red]Search Failed[/red]", border_style="red"))
+                        except Exception as e:
+                            print(Panel(f"❌ Error searching Wikipedia: {str(e)}", title="[red]Search Error[/red]", border_style="red"))
                 continue
+                
+            # --- Handle "define" command using IRA language module ---
+            if text_stripped.startswith("define "):
+                entity = text_stripped.removeprefix("define ").strip()
+                if entity:
+                    # Create a definition query
+                    query_data = {
+                        "entity": entity,
+                        "query_type": "definition",
+                        "attributes": {}
+                    }
+                    
+                    # Generate response using the LLM interface
+                    response = llm_interface.generate_response(query_data)
+                    
+                    # Display the response
+                    print(Panel(response, title=f"[bold green]Definition[/bold green]", border_style="green"))
+                    continue
 
-            # --- Normal Question Parsing ---
+            # --- Try IRA Language Module First ---
+            # Parse the query using the LLM interface
+            parsed_query = llm_interface.parse_query(text)
+            
+            # If the query was successfully parsed by the LLM interface
+            if parsed_query and parsed_query.get("query_type") != "unknown":
+                # Generate a response using the LLM interface
+                response = llm_interface.generate_response(parsed_query)
+                
+                # Determine the appropriate panel title and style based on query type
+                if parsed_query.get("query_type") == "greeting":
+                    title = "Greeting"
+                    style = "green"
+                elif parsed_query.get("query_type") == "verification":
+                    title = "Confirmation"
+                    style = "green" if "Yes" in response else "red"
+                elif parsed_query.get("query_type") == "definition":
+                    title = "Definition"
+                    style = "green"
+                else:
+                    title = parsed_query.get("query_type", "Response").capitalize()
+                    style = "green"
+                
+                # Display the response
+                print(Panel(response, title=f"[bold {style}]{title}[/bold {style}]", border_style=style))
+                continue
+            
+            # --- Fallback to Traditional Processing ---
+            # Normal Question Parsing
             initial_signal = query_parser.parse_question(text)
 
             if not initial_signal:

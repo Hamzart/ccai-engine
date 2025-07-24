@@ -1,0 +1,602 @@
+{
+  "active_context_id": "43707bf5-e012-4e20-922f-3f59fbd3ae0e",
+  "contexts": {
+    "43707bf5-e012-4e20-922f-3f59fbd3ae0e": {
+      "id": "43707bf5-e012-4e20-922f-3f59fbd3ae0e",
+      "messages": [
+        {
+          "id": "3291c2be-8471-4a8b-9440-e1107557459b",
+          "content": "What is a dog?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.672266",
+          "metadata": {}
+        },
+        {
+          "id": "e3091118-fda0-4d61-8468-88e1fe57f07a",
+          "content": "What is a dog?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.672284",
+          "metadata": {}
+        },
+        {
+          "id": "081621a7-eeb8-405b-9266-bcdae8c5b178",
+          "content": "The answer is I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T09:51:29.672335",
+          "metadata": {}
+        },
+        {
+          "id": "4957ea3a-b602-415b-b469-02befa76d70f",
+          "content": "What sound does a cat make?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.674331",
+          "metadata": {}
+        },
+        {
+          "id": "bb8c32bd-a1df-4586-8117-8d831d338b9d",
+          "content": "What sound does a cat make?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.674341",
+          "metadata": {}
+        },
+        {
+          "id": "9e388cfe-9295-492e-92b9-3cce39458408",
+          "content": "The answer is I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T09:51:29.674353",
+          "metadata": {}
+        },
+        {
+          "id": "fd70d1de-4192-4c82-9df3-a821361ba7a2",
+          "content": "How many legs does a dog have?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.677088",
+          "metadata": {}
+        },
+        {
+          "id": "82b8613c-a3ff-4d4c-b169-6a9d0846aca4",
+          "content": "How many legs does a dog have?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.677096",
+          "metadata": {}
+        },
+        {
+          "id": "d6c9711f-0c6d-49df-8a00-e96b65d53179",
+          "content": "I believe that I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T09:51:29.677105",
+          "metadata": {}
+        },
+        {
+          "id": "0f8e8e98-016a-4677-8c5a-c5f7670089ba",
+          "content": "Is a cat an animal?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.679730",
+          "metadata": {}
+        },
+        {
+          "id": "d8a0e293-8b96-4012-abfb-959ae2046844",
+          "content": "Is a cat an animal?",
+          "type": "USER",
+          "timestamp": "2025-07-24T09:51:29.679739",
+          "metadata": {}
+        },
+        {
+          "id": "dd39a2b0-cf2c-4d36-8b7e-9c7c807bfe13",
+          "content": "According to my information, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T09:51:29.679748",
+          "metadata": {}
+        },
+        {
+          "id": "74dae93d-f9e1-45e3-8cb5-97812f37d24d",
+          "content": "What is a lion?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.459553",
+          "metadata": {}
+        },
+        {
+          "id": "e38fe88f-08d3-49e2-b024-a4452f29df92",
+          "content": "What is a lion?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.459586",
+          "metadata": {}
+        },
+        {
+          "id": "833df602-54c4-419f-b784-c3d0d7f09355",
+          "content": "Based on my knowledge, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:23:23.459674",
+          "metadata": {}
+        },
+        {
+          "id": "b6e99516-1096-4132-93f9-8fd57e47811e",
+          "content": "What is a tiger?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.463848",
+          "metadata": {}
+        },
+        {
+          "id": "4e60e51f-e308-4041-98d0-040a36fe29f1",
+          "content": "What is a tiger?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.463860",
+          "metadata": {}
+        },
+        {
+          "id": "5a8f759b-2465-474b-82e9-9ee0eacd08bd",
+          "content": "According to my information, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:23:23.463877",
+          "metadata": {}
+        },
+        {
+          "id": "8964b468-c3cd-4af1-8158-ee8d38be730b",
+          "content": "What is a computer?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.467177",
+          "metadata": {}
+        },
+        {
+          "id": "6d6a76b4-928d-435c-a970-da00cd54495e",
+          "content": "What is a computer?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.467191",
+          "metadata": {}
+        },
+        {
+          "id": "3a63adb5-6873-4682-bc0b-993daa095c30",
+          "content": "The answer is I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:23:23.467205",
+          "metadata": {}
+        },
+        {
+          "id": "6ff4ffed-bc42-49b6-978e-2e36f340f150",
+          "content": "What is artificial intelligence?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.471034",
+          "metadata": {}
+        },
+        {
+          "id": "5b8d1b45-ff5e-42c0-b86d-a2b9de0a87b2",
+          "content": "What is artificial intelligence?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:23.471043",
+          "metadata": {}
+        },
+        {
+          "id": "c642afbf-4b45-4b46-a9ab-b4f395e54f7b",
+          "content": "According to my information, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:23:23.471052",
+          "metadata": {}
+        },
+        {
+          "id": "f238438e-83e7-4414-95a9-38b139eb9718",
+          "content": "What is Python (programming language)?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:25.656668",
+          "metadata": {}
+        },
+        {
+          "id": "c3280e19-364a-4cf8-8b60-b55e341b400f",
+          "content": "What is Python (programming language)?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:23:25.656694",
+          "metadata": {}
+        },
+        {
+          "id": "037b54f3-8192-4c1b-aea8-8949c580cffa",
+          "content": "I believe that I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:23:25.656720",
+          "metadata": {}
+        },
+        {
+          "id": "2234d238-ae9e-485e-9813-6423c1093d9a",
+          "content": "tesla",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:25:58.569024",
+          "metadata": {}
+        },
+        {
+          "id": "ad000669-9886-4047-a5b2-77712465aa7c",
+          "content": "tesla",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:25:58.569070",
+          "metadata": {}
+        },
+        {
+          "id": "2e53b838-2307-4191-93c7-15f0a076cbee",
+          "content": "I'm not sure I understand. Could you please rephrase that?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:25:58.569166",
+          "metadata": {}
+        },
+        {
+          "id": "57b408a8-d874-43dc-94be-77027058b04b",
+          "content": "what is tesla",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:26:04.792966",
+          "metadata": {}
+        },
+        {
+          "id": "4aaedfe3-7050-4ea5-9ace-a7273b09b6f7",
+          "content": "what is tesla",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:26:04.793057",
+          "metadata": {}
+        },
+        {
+          "id": "3328340c-38af-40ac-89cc-ab57f76e1315",
+          "content": "I'm sorry, but I don't quite follow. Could you explain differently?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:26:04.793138",
+          "metadata": {}
+        },
+        {
+          "id": "9032c499-7c88-4b14-9baa-dcec037ab026",
+          "content": "what is a lion?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:26:14.539155",
+          "metadata": {}
+        },
+        {
+          "id": "c5f9863d-03e0-46a9-9741-0533890ce68f",
+          "content": "what is a lion?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:26:14.539204",
+          "metadata": {}
+        },
+        {
+          "id": "940c4a57-15ef-42d3-b671-bad0a7ce7d83",
+          "content": "Based on my knowledge, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:26:14.539255",
+          "metadata": {}
+        },
+        {
+          "id": "068e0bfd-eb8b-423a-8d17-0e4c60a6fb5a",
+          "content": "dogs are animals",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:22.149837",
+          "metadata": {}
+        },
+        {
+          "id": "5d4beccf-f5f2-4b8b-9325-41666ac03225",
+          "content": "dogs are animals",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:22.149861",
+          "metadata": {}
+        },
+        {
+          "id": "18165f48-d0af-4e18-a0b5-c9e0278c074b",
+          "content": "I'm having trouble understanding your request. Could you try again?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:27:22.149879",
+          "metadata": {}
+        },
+        {
+          "id": "fabe272f-0ee2-4234-8bc2-2f9cf47c4fe0",
+          "content": "dog is an animal",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:36.667183",
+          "metadata": {}
+        },
+        {
+          "id": "0c11064a-8c33-4e15-9221-d0f47e38c453",
+          "content": "dog is an animal",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:36.667209",
+          "metadata": {}
+        },
+        {
+          "id": "f92995c6-2ad5-4c78-9a30-c5356a8e903f",
+          "content": "I'm having trouble understanding your request. Could you try again?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:27:36.667230",
+          "metadata": {}
+        },
+        {
+          "id": "d698ffa7-a13d-4927-bb45-a171120f641a",
+          "content": "what is a dog?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:46.274357",
+          "metadata": {}
+        },
+        {
+          "id": "789b718d-d996-4423-b196-b11afcac9638",
+          "content": "what is a dog?",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:27:46.274378",
+          "metadata": {}
+        },
+        {
+          "id": "7b014158-e946-4456-b54d-99bb6478e132",
+          "content": "According to my information, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:27:46.274397",
+          "metadata": {}
+        },
+        {
+          "id": "96e6e8c6-827f-40fa-a357-e8f8f1bdfd89",
+          "content": "hello",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:30:31.612288",
+          "metadata": {}
+        },
+        {
+          "id": "817230d5-bc7f-4a08-b135-8727482be1e3",
+          "content": "hello",
+          "type": "USER",
+          "timestamp": "2025-07-24T14:30:31.612302",
+          "metadata": {}
+        },
+        {
+          "id": "a7677f6a-9f3e-45cc-80c2-47d953b1b19b",
+          "content": "Good afternoon! How can I help you today?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T14:30:31.612375",
+          "metadata": {}
+        },
+        {
+          "id": "860aa3bc-d798-4117-b65f-3dff06bf081c",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:57:54.424554",
+          "metadata": {}
+        },
+        {
+          "id": "c7538066-1a1d-4e6e-931f-79d1f101c291",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:57:54.424567",
+          "metadata": {}
+        },
+        {
+          "id": "adad7c61-60c4-4f8f-b3f8-a486f1e04234",
+          "content": "Good afternoon! How can I help you today?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T15:57:54.424634",
+          "metadata": {}
+        },
+        {
+          "id": "14ec24a0-ad64-47ed-92a0-ce632dfb4461",
+          "content": "/Users/hamzatrabelsi/Desktop/ccai-engine/ira/ira_env/bin/python /Users/hamzatrabelsi/Desktop/ccai-engine/ira/core/learning/knowledge_loader_manager.py",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:58:09.740010",
+          "metadata": {}
+        },
+        {
+          "id": "b18e525c-18ac-40b3-bac2-6919edf4bab3",
+          "content": "/Users/hamzatrabelsi/Desktop/ccai-engine/ira/ira_env/bin/python /Users/hamzatrabelsi/Desktop/ccai-engine/ira/core/learning/knowledge_loader_manager.py",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:58:09.740073",
+          "metadata": {}
+        },
+        {
+          "id": "9648a667-1671-4b7f-92e8-d2dd7e2aae06",
+          "content": "I'm sorry, but I don't quite follow. Could you explain differently?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T15:58:09.740150",
+          "metadata": {}
+        },
+        {
+          "id": "a288857f-28c7-4605-b90e-e7d0b0f08933",
+          "content": "/Users/hamzatrabelsi/Desktop/ccai-engine/ira/ira_env/bin/python /Users/hamzatrabelsi/Desktop/ccai-engine/ira/core/learning/knowledge_loader_manager.py",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:58:12.872343",
+          "metadata": {}
+        },
+        {
+          "id": "18ddd0b5-750e-498e-a256-a0c557bf1a6d",
+          "content": "/Users/hamzatrabelsi/Desktop/ccai-engine/ira/ira_env/bin/python /Users/hamzatrabelsi/Desktop/ccai-engine/ira/core/learning/knowledge_loader_manager.py",
+          "type": "USER",
+          "timestamp": "2025-07-24T15:58:12.872416",
+          "metadata": {}
+        },
+        {
+          "id": "bcd3f4dd-f463-4786-bb17-643e2b33bae8",
+          "content": "I'm having trouble understanding your request. Could you try again?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T15:58:12.872487",
+          "metadata": {}
+        },
+        {
+          "id": "553003a8-76de-4702-aa59-d2680362597e",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:01:19.077954",
+          "metadata": {}
+        },
+        {
+          "id": "5f348969-d309-4678-ac96-b6177eb10550",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:01:19.077971",
+          "metadata": {}
+        },
+        {
+          "id": "7ebbade9-85f3-4889-a734-52634e2fb306",
+          "content": "Good afternoon! How can I help you today?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:01:19.078043",
+          "metadata": {}
+        },
+        {
+          "id": "7f0f1057-f6f4-4774-86e8-feeeb78ce843",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:01:59.043576",
+          "metadata": {}
+        },
+        {
+          "id": "ed1fe9a1-0e18-4094-b337-812259fd0fa0",
+          "content": "hi",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:01:59.043589",
+          "metadata": {}
+        },
+        {
+          "id": "f22b982a-b9aa-4d3f-8b4c-b1f0508d2895",
+          "content": "Good afternoon! How can I help you today?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:01:59.043656",
+          "metadata": {}
+        },
+        {
+          "id": "5a324b1b-2082-4d5a-bc82-af3d7054e11f",
+          "content": "can you talk?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:02:12.876139",
+          "metadata": {}
+        },
+        {
+          "id": "d8853888-9295-4c52-b24f-623cb3be016c",
+          "content": "can you talk?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:02:12.876191",
+          "metadata": {}
+        },
+        {
+          "id": "7448e288-c5f1-42ac-afa9-dd3921b3088b",
+          "content": "Based on my knowledge, I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:02:12.876279",
+          "metadata": {}
+        },
+        {
+          "id": "10bc640c-8468-44fe-a580-b6b2afe8fd64",
+          "content": "unicorns have a horn on their forehead",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:07:19.983262",
+          "metadata": {}
+        },
+        {
+          "id": "815e6063-a07d-4bf5-8e8a-3e271c2cdf58",
+          "content": "unicorns have a horn on their forehead",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:07:19.983280",
+          "metadata": {}
+        },
+        {
+          "id": "67c2a967-6414-4343-bd95-7938319416f9",
+          "content": "I'm not sure I understand. Could you please rephrase that?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:07:19.983363",
+          "metadata": {}
+        },
+        {
+          "id": "c2cb22fc-7ee5-4594-81ff-6c41e66ea017",
+          "content": "unicorns are magical beings",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:07:19.993848",
+          "metadata": {}
+        },
+        {
+          "id": "9ecd68c2-f7e4-4a24-bc98-3247032e52dd",
+          "content": "unicorns are magical beings",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:07:19.993865",
+          "metadata": {}
+        },
+        {
+          "id": "37305081-2133-4912-b359-c2204b252d6c",
+          "content": "I'm having trouble understanding your request. Could you try again?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:07:19.993886",
+          "metadata": {}
+        },
+        {
+          "id": "03b31870-1952-4763-a622-eed125b10384",
+          "content": "unicorns have a horn on their forehead",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:13:58.849682",
+          "metadata": {}
+        },
+        {
+          "id": "b5b0f098-76bc-4eef-a41d-e9afcc24a225",
+          "content": "unicorns have a horn on their forehead",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:13:58.849703",
+          "metadata": {}
+        },
+        {
+          "id": "6add4f0b-eb24-4420-8a08-1dd9b8000f92",
+          "content": "I'm not sure I understand. Could you please rephrase that?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:13:58.849789",
+          "metadata": {}
+        },
+        {
+          "id": "de8e28d7-63f2-4cdf-9838-ce1033004377",
+          "content": "unicorns are magical beings",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:13:58.859574",
+          "metadata": {}
+        },
+        {
+          "id": "4f346af9-0226-4445-989d-4fc5c70b0435",
+          "content": "unicorns are magical beings",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:13:58.859588",
+          "metadata": {}
+        },
+        {
+          "id": "7ab489a2-5b41-4a57-9557-fa38ec4fedfc",
+          "content": "I'm having trouble understanding your request. Could you try again?",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:13:58.859607",
+          "metadata": {}
+        },
+        {
+          "id": "c5265fc0-6662-41b3-bbdf-106991690fc7",
+          "content": "so what does lion do?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:17:27.602651",
+          "metadata": {}
+        },
+        {
+          "id": "077db7b1-cbc3-4a5a-b842-fc6deafdb444",
+          "content": "so what does lion do?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:17:27.602670",
+          "metadata": {}
+        },
+        {
+          "id": "c80f0b07-54a4-427a-bcf5-342136f8a8e5",
+          "content": "I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:17:27.602731",
+          "metadata": {}
+        },
+        {
+          "id": "3eed6e9a-d951-4a45-a17a-13801d9b5911",
+          "content": "can dog walk?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:19:23.044560",
+          "metadata": {}
+        },
+        {
+          "id": "24e018ae-768a-489e-ad10-064e9312422b",
+          "content": "can dog walk?",
+          "type": "USER",
+          "timestamp": "2025-07-24T16:19:23.044582",
+          "metadata": {}
+        },
+        {
+          "id": "5b5f9a34-9be7-4b5e-9909-915c1ebfac6e",
+          "content": "I don't have enough information to answer that question.",
+          "type": "SYSTEM",
+          "timestamp": "2025-07-24T16:19:23.044617",
+          "metadata": {}
+        }
+      ],
+      "state": "ACTIVE",
+      "metadata": {},
+      "created_at": "2025-07-24T09:51:29.670222",
+      "updated_at": "2025-07-24T16:19:23.044618"
+    }
+  }
+}

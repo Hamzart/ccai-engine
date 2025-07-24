@@ -40,6 +40,7 @@ from ccai.core.subsystems.analogical import AnalogicalReasoner
 from ccai.core.subsystems.temporal import TemporalReasoner
 from ccai.core.subsystems.hypothetical import HypotheticalReasoner
 from ccai.external.fusion import ExternalKnowledgeSubsystem
+from ccai.llm.interface import LLMInterface
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -83,6 +84,7 @@ sentiment_analyzer = SentimentAnalyzer()
 response_generator = ResponseGenerator()
 personalization_adapter = PersonalizationAdapter(profile_manager)
 fusion = KnowledgeFusion(graph)
+llm_interface = LLMInterface()
 
 # Initialize subsystems
 subsystems = [
@@ -103,13 +105,19 @@ reasoning_core = ReasoningCore(graph, subsystems)
 # Load graph from disk
 graph.load_from_disk()
 
-# Seed the graph with built-in knowledge on first run
-if not graph._nodes:
-    kb_file = Path("knowledge.txt")
-    if kb_file.exists():
-        logger.info("Seeding knowledge base from knowledge.txt...")
-        extractor.ingest_text(kb_file.read_text())
-        graph.save_snapshot()
+# Always load the knowledge bases
+kb_file = Path("knowledge.txt")
+if kb_file.exists():
+    logger.info("Loading knowledge base from knowledge.txt...")
+    extractor.ingest_text(kb_file.read_text())
+    graph.save_snapshot()
+
+# Load common knowledge
+common_kb_file = Path("common_knowledge.txt")
+if common_kb_file.exists():
+    logger.info("Loading common knowledge base...")
+    extractor.ingest_text(common_kb_file.read_text())
+    graph.save_snapshot()
 
 # Active dialog managers for each user
 dialog_managers: Dict[str, DialogManager] = {}
@@ -153,6 +161,7 @@ def get_dialog_manager(user_id: str) -> DialogManager:
             profile_manager=profile_manager,
             personalization_adapter=personalization_adapter,
             entity_extractor=entity_extractor,
+            llm_interface=llm_interface,
             current_user_id=user_id
         )
     return dialog_managers[user_id]

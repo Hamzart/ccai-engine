@@ -98,10 +98,12 @@ class WikipediaConnector(KnowledgeConnector):
             A dictionary with detailed information or None if not found
         """
         # Determine if item_id is a page ID or title
-        if item_id.isdigit():
-            id_param = {"pageids": item_id}
+        # Convert item_id to string to handle cases where an integer is passed
+        item_id_str = str(item_id)
+        if item_id_str.isdigit():
+            id_param = {"pageids": item_id_str}
         else:
-            id_param = {"titles": item_id}
+            id_param = {"titles": item_id_str}
         
         params = {
             "action": "query",
